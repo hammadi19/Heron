@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  ChevronDown,
   LayoutDashboard,
   Search,
 } from "lucide-react";
@@ -96,32 +95,28 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
   return (
     <header className={`relative z-20 border-b px-5 py-5 sm:px-8 ${inverted ? "border-white/14 bg-transparent" : "border-black/8 bg-white/92 backdrop-blur-xl"}`}>
       <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-6">
-      <HeronLogo inverted={inverted} />
-      <nav className={`hidden items-center gap-9 text-[0.95rem] font-black lg:flex ${inverted ? "text-white/82" : "text-[#111]"}`}>
-        {navLinks.map(([label, href]) => (
-          <Link key={href} href={href} className="flex items-center gap-1 transition hover:text-[#145cff]">
-            {label}
-            {label === "Services" ? (
-              <ChevronDown className="size-3.5" />
-            ) : null}
+        <HeronLogo inverted={inverted} />
+        <nav className={`hidden items-center gap-8 text-[0.9rem] font-black lg:flex ${inverted ? "text-white/82" : "text-[#111]"}`}>
+          {navLinks.map(([label, href]) => (
+            <Link key={href} href={href} className="transition hover:text-[#145cff]">
+              {label}
+            </Link>
+          ))}
+        </nav>
+        <div className={`flex items-center gap-3 ${inverted ? "text-white" : "text-[#111]"}`}>
+          <Search className="size-5 opacity-80" />
+          <Link
+            href="/contact-us"
+            className={`hidden h-12 items-center gap-2 rounded-xl px-6 text-sm font-black transition sm:inline-flex ${
+              inverted
+                ? "bg-white text-[#080808] hover:bg-[#b9f6e8]"
+                : "bg-[#080808] text-white hover:bg-[#145cff]"
+            }`}
+          >
+            Get In Touch
           </Link>
-        ))}
-      </nav>
-      <div className={`flex items-center gap-4 ${inverted ? "text-white" : "text-[#111]"}`}>
-        <Search className="size-6 opacity-80" />
-        <Link
-          href="/contact-us"
-          className={`hidden h-14 items-center gap-2 rounded-2xl px-7 text-sm font-black transition sm:inline-flex ${
-            inverted
-              ? "bg-white text-[#080808] hover:bg-[#b9f6e8]"
-              : "bg-[#080808] text-white hover:bg-[#145cff]"
-          }`}
-        >
-          Get In Touch
-          <ArrowRight className="size-4" />
-        </Link>
-        <SiteDrawer inverted={inverted} />
-      </div>
+          <SiteDrawer inverted={inverted} />
+        </div>
       </div>
     </header>
   );
@@ -138,25 +133,25 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#fbfaf8] text-[#080808]">
-      <div className="absolute inset-x-0 top-16 h-[26rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
+      <div className="absolute inset-x-0 top-16 h-[20rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
       <Header />
-      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:py-28">
+      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:py-20">
         <div>
           <p className="text-sm font-black text-[#145cff]">{eyebrow}</p>
-          <h1 className="mt-5 max-w-4xl text-5xl font-light leading-[1.03] tracking-normal sm:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
             <span className="font-serif italic">{title.split(" ").slice(0, 2).join(" ")}</span>{" "}
             {title.split(" ").slice(2).join(" ")}
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-[#666]">{copy}</p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#666]">{copy}</p>
         </div>
-        <div className="grid gap-4 border border-black/10 bg-white/70 p-5 backdrop-blur-xl md:grid-cols-3">
+        <div className="grid gap-3 border border-black/10 bg-white/70 p-4 backdrop-blur-xl md:grid-cols-3">
           {[
             ["38%", "qualified demand lift"],
             ["4.8x", "faster test learning"],
             ["90d", "growth sprint plan"],
           ].map(([value, label]) => (
-            <div key={value} className="border-r border-black/10 p-4 text-[#080808] last:border-r-0">
-              <p className="font-serif text-4xl font-light">{value}</p>
+            <div key={value} className="border-r border-black/10 p-3 text-[#080808] last:border-r-0">
+              <p className="font-serif text-3xl font-light">{value}</p>
               <p className="mt-2 text-xs font-bold leading-5 text-[#666]">{label}</p>
             </div>
           ))}
@@ -182,10 +177,10 @@ export function SectionTitle({
       {eyebrow ? (
         <p className="mb-4 text-sm font-black text-[#145cff]">{eyebrow}</p>
       ) : null}
-      <h2 className="text-4xl font-light leading-[1.06] tracking-normal text-[#080808] sm:text-6xl">
+      <h2 className="text-3xl font-light leading-[1.06] tracking-normal text-[#080808] sm:text-5xl">
         {title}
       </h2>
-      {copy ? <p className="mt-6 text-lg leading-8 text-[#666]">{copy}</p> : null}
+      {copy ? <p className="mt-5 text-base leading-7 text-[#666]">{copy}</p> : null}
     </div>
   );
 }
@@ -196,12 +191,12 @@ export function ServiceGrid() {
       {services.map((service) => (
         <article
           key={service.title}
-          className="group border-b border-r border-black/10 p-8 transition hover:bg-[#fbfaf8] md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+          className="group border-b border-r border-black/10 p-6 transition hover:bg-[#fbfaf8] md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
         >
-          <service.icon className="size-14" />
-          <h3 className="mt-8 text-2xl font-black">{service.title}</h3>
-          <p className="mt-4 min-h-24 text-sm leading-7 text-[#666]">{service.copy}</p>
-          <Link href="/contact-us" className="mt-7 inline-flex items-center gap-2 text-sm font-black text-[#080808] transition group-hover:text-[#145cff]">
+          <service.icon className="size-12" />
+          <h3 className="mt-6 text-xl font-black">{service.title}</h3>
+          <p className="mt-3 min-h-20 text-sm leading-6 text-[#666]">{service.copy}</p>
+          <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#080808] transition group-hover:text-[#145cff]">
             Explore service
             <ArrowRight className="size-4" />
           </Link>
@@ -213,10 +208,10 @@ export function ServiceGrid() {
 
 export function PortfolioGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] gap-7 md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-2 lg:grid-cols-3">
       {portfolio.map(([title, label, image], index) => (
         <article key={`${title}-${label}`} className={`group overflow-hidden rounded-2xl bg-white shadow-[0_22px_70px_rgba(16,24,40,.08)] ${index === 1 ? "lg:translate-y-8" : ""}`}>
-          <div className="relative h-72 overflow-hidden">
+          <div className="relative h-60 overflow-hidden">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_34%,rgba(0,0,0,.78)_100%)]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -232,19 +227,19 @@ export function PortfolioGrid() {
 
 export function NewsGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] gap-7 md:grid-cols-3">
+    <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-3">
       {news.map(([date, title, image]) => (
         <article key={title} className="group overflow-hidden rounded-2xl border border-black/10 bg-white">
-          <div className="relative h-60">
+          <div className="relative h-52">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
-          <div className="p-7">
+          <div className="p-6">
             <p className="text-sm font-black text-[#145cff]">{date}</p>
-            <h3 className="mt-4 text-2xl font-black leading-snug">{title}</h3>
-            <p className="mt-4 text-sm leading-7 text-[#666]">
+            <h3 className="mt-3 text-xl font-black leading-snug">{title}</h3>
+            <p className="mt-3 text-sm leading-6 text-[#666]">
               Practical thinking for teams turning attention into measurable demand.
             </p>
-            <Link href="/contact-us" className="mt-6 inline-flex items-center gap-2 text-sm font-black">
+            <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black">
               Read insight
               <ArrowRight className="size-4" />
             </Link>
@@ -265,24 +260,24 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact-us" className="border-t border-black/8 bg-white text-[#080808]">
-      <div className="grid min-h-[38rem] border-b border-black/8 lg:grid-cols-[0.66fr_1.08fr]">
-        <div className="flex flex-col justify-between border-black/8 px-5 py-16 sm:px-8 lg:border-r lg:px-14">
+    <footer id="contact-us" className="border-t border-black/8 bg-white px-5 text-[#080808] sm:px-8">
+      <div className="mx-auto grid max-w-[92rem] border-x border-black/8 lg:grid-cols-[0.66fr_1.08fr]">
+        <div className="flex flex-col justify-between border-black/8 py-12 lg:border-r lg:px-10">
           <div>
             <HeronLogo />
 
-            <div className="mt-24 grid gap-8 sm:grid-cols-2">
+            <div className="mt-16 grid gap-8 sm:grid-cols-2">
               <div>
-                <h3 className="text-xl font-black xl:text-2xl">London Office</h3>
-                <p className="mt-5 max-w-xs text-lg leading-8 text-[#555]">
+                <h3 className="text-lg font-black xl:text-xl">London Office</h3>
+                <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
                   45 King&apos;s Road, 3rd Floor Chelsea,
                   <br />
                   London SW3 5EP, UK
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-black xl:text-2xl">Manchester Office</h3>
-                <p className="mt-5 max-w-xs text-lg leading-8 text-[#555]">
+                <h3 className="text-lg font-black xl:text-xl">Manchester Office</h3>
+                <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
                   31 Spinningfields Avenue,
                   <br />
                   Manchester M3 3EB, UK
@@ -290,27 +285,27 @@ export function Footer() {
               </div>
             </div>
 
-            <form className="mt-14 flex max-w-2xl items-center rounded-full border border-black/10 bg-white p-2 shadow-[0_18px_60px_rgba(16,24,40,.06)]">
+            <form className="mt-10 flex max-w-2xl items-center rounded-full border border-black/10 bg-white p-2 shadow-[0_18px_60px_rgba(16,24,40,.06)]">
               <input
-                className="min-w-0 flex-1 bg-transparent px-6 text-lg outline-none placeholder:text-[#8a8a8a]"
+                className="min-w-0 flex-1 bg-transparent px-5 text-base outline-none placeholder:text-[#8a8a8a]"
                 placeholder="Type your Email address"
                 aria-label="Newsletter email"
               />
               <button
-                className="grid size-16 shrink-0 place-items-center rounded-full bg-[#080808] text-white transition hover:bg-[#145cff]"
+                className="grid size-14 shrink-0 place-items-center rounded-full bg-[#080808] text-white transition hover:bg-[#145cff]"
                 type="button"
                 aria-label="Subscribe to newsletter"
               >
-                <SendIcon className="size-10" />
+                <SendIcon className="size-9" />
               </button>
             </form>
           </div>
 
-          <div className="mt-16 flex flex-col gap-8 text-sm text-[#555] sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 flex flex-col gap-6 text-sm text-[#555] sm:flex-row sm:items-center sm:justify-between">
             <p>
               Copyright 2026 <span className="font-black text-[#080808]">Heron</span> | All Right Reserved.
             </p>
-            <div className="flex items-center gap-9 text-lg font-black text-[#080808]">
+            <div className="flex items-center gap-7 text-base font-black text-[#080808]">
               <a href="/contact-us" aria-label="Facebook" className="hover:text-[#145cff]">f</a>
               <a href="/contact-us" aria-label="LinkedIn" className="hover:text-[#145cff]">in</a>
               <a href="/contact-us" aria-label="Twitter" className="hover:text-[#145cff]">x</a>
@@ -319,40 +314,40 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col px-5 py-16 sm:px-8 lg:px-20">
+        <div className="flex flex-col py-12 lg:px-14">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
-            <h2 className="max-w-3xl text-4xl font-light leading-[1.04] tracking-normal sm:text-5xl 2xl:text-6xl">
+            <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl">
               Let&apos;s create the{" "}
               <span className="font-serif italic">best digital growth systems.</span>
             </h2>
             <Link
               href="/contact-us"
-              className="inline-flex h-16 w-fit items-center gap-2 rounded-2xl bg-[#080808] px-9 text-base font-black text-white transition hover:bg-[#145cff]"
+              className="inline-flex h-14 w-fit items-center gap-2 rounded-xl bg-[#080808] px-7 text-base font-black text-white transition hover:bg-[#145cff]"
             >
               Let&apos;s Talk
               <ArrowRight className="size-5" />
             </Link>
           </div>
 
-          <div className="mt-20 grid flex-1 border-t border-black/8 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
-            <div className="border-black/8 py-12 lg:border-r lg:pr-10">
-              <h3 className="text-xl font-black xl:text-2xl">Contact Us</h3>
-              <div className="mt-7 grid gap-5 text-lg text-[#555]">
+          <div className="mt-14 grid flex-1 border-t border-black/8 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
+            <div className="border-black/8 py-9 lg:border-r lg:pr-10">
+              <h3 className="text-lg font-black xl:text-xl">Contact Us</h3>
+              <div className="mt-6 grid gap-4 text-base text-[#555]">
                 <p className="flex items-center gap-4">
-                  <PhoneIcon className="size-10 shrink-0" />
+                  <PhoneIcon className="size-8 shrink-0" />
                   +44 0000 000000
                 </p>
                 <p className="flex items-center gap-4">
-                  <MailIcon className="size-10 shrink-0" />
+                  <MailIcon className="size-8 shrink-0" />
                   hello@heron-marketing.com
                 </p>
               </div>
             </div>
 
             {[0, 1].map((column) => (
-              <div key={column} className="border-black/8 py-12 lg:border-r lg:px-10 lg:last:border-r-0">
-                <h3 className="text-xl font-black xl:text-2xl">Useful Link</h3>
-                <div className="mt-7 grid gap-5 text-lg text-[#555]">
+              <div key={column} className="border-black/8 py-9 lg:border-r lg:px-10 lg:last:border-r-0">
+                <h3 className="text-lg font-black xl:text-xl">Useful Link</h3>
+                <div className="mt-6 grid gap-4 text-base text-[#555]">
                   {usefulLinks.map(([label, href]) => (
                     <Link key={`${column}-${href}`} href={href} className="transition hover:text-[#145cff]">
                       {label}

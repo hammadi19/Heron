@@ -13,24 +13,24 @@ export default function ServicesPage() {
         copy="Choose one focused sprint or combine strategy, creative, media, search, lifecycle, and analytics into one connected demand system."
       />
 
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
+      <section className="px-5 py-16 sm:px-8 lg:py-20">
         <ServiceGrid />
       </section>
 
-      <section className="border-y border-black/8 bg-white px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+      <section className="border-y border-black/8 bg-white px-5 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <p className="text-sm font-black text-[#145cff]">Sprint Menu</p>
-            <h2 className="mt-5 text-5xl font-light leading-[1.05] tracking-normal">
+            <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal">
               Build only what the growth bottleneck needs.
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {services.map((service) => (
               <article key={service.title} className="border border-black/10 bg-[#fbfaf8] p-6">
-                <h3 className="text-2xl font-black">{service.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#666]">{service.copy}</p>
-                <p className="mt-5 flex items-center gap-2 text-sm font-black text-[#145cff]">
+                <h3 className="text-xl font-black">{service.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#666]">{service.copy}</p>
+                <p className="mt-4 flex items-center gap-2 text-sm font-black text-[#145cff]">
                   <span className="grid size-5 shrink-0 place-items-center rounded-full bg-[#eef4ff] text-[0.7rem] text-[#145cff]">
                     ✓
                   </span>
@@ -42,15 +42,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-5 py-24 text-center sm:px-8">
-        <h2 className="mx-auto max-w-3xl text-5xl font-light leading-[1.05] tracking-normal">
+      <section className="px-5 py-16 text-center sm:px-8">
+        <h2 className="mx-auto max-w-3xl text-4xl font-light leading-[1.05] tracking-normal">
           Need the right service mix?
         </h2>
-        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#666]">
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#666]">
           Start with a short brief and Heron will recommend the fastest route to
           useful growth signals.
         </p>
-        <Button asChild className="mt-8 h-14 rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff]">
+        <Button asChild className="mt-6 h-14 rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff]">
           <Link href="/contact-us">
             Start a brief
             <ArrowRight className="size-4" />

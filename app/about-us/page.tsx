@@ -27,19 +27,19 @@ export default function AboutPage() {
         copy="Heron Marketing is built for companies that want sharper positioning, cleaner execution, and digital growth they can actually understand."
       />
 
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+      <section className="px-5 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
           <div>
             <p className="text-sm font-black text-[#145cff]">How we think</p>
-            <h2 className="mt-5 text-5xl font-light leading-[1.05] tracking-normal sm:text-6xl">
+            <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl">
               We make marketing easier to choose, launch, measure, and improve.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-[#666]">
+            <p className="mt-5 text-base leading-7 text-[#666]">
               Most teams do not need more disconnected tactics. They need a
               clear story, a practical campaign system, and a rhythm for making
               better decisions every week.
             </p>
-            <div className="mt-8 grid gap-3 font-bold text-[#333]">
+            <div className="mt-6 grid gap-3 font-bold text-[#333]">
               {["Strategy before spend", "Creative tied to customer intent", "Weekly decisions from real signals", "Clear handoff between marketing and sales"].map((item) => (
                 <p key={item} className="flex items-center gap-3">
                   <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[#eef4ff] text-sm font-black text-[#145cff]">
@@ -49,39 +49,39 @@ export default function AboutPage() {
                 </p>
               ))}
             </div>
-            <Button asChild className="mt-9 h-14 rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff]">
+            <Button asChild className="mt-5 h-14 rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff]">
               <Link href="/contact-us">
                 Talk to Heron
                 <ArrowRight className="size-4" />
               </Link>
             </Button>
           </div>
-          <div className="relative min-h-[38rem] overflow-hidden rounded-[2rem] bg-[#e8edf2]">
+          <div className="relative min-h-[26rem] overflow-hidden rounded-[2rem] bg-[#e8edf2]">
             <Image src="/heron-hero-office.png" alt="Heron strategy team" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
       </section>
 
-      <section className="border-y border-black/8 bg-white px-5 py-20 sm:px-8">
+      <section className="border-y border-black/8 bg-white px-5 py-14 sm:px-8">
         <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
           {principles.map(([title, copy, Icon]) => (
             <article key={title as string} className="border-black/10 md:border-r md:pr-10 md:last:border-r-0">
-              <Icon className="size-16" />
-              <h3 className="mt-8 text-2xl font-black">{title as string}</h3>
-              <p className="mt-4 leading-7 text-[#666]">{copy as string}</p>
+              <Icon className="size-12" />
+              <h3 className="mt-5 text-xl font-black">{title as string}</h3>
+              <p className="mt-3 leading-6 text-[#666]">{copy as string}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
-        <div className="mx-auto max-w-[92rem] rounded-2xl bg-[#080808] p-8 text-white sm:p-12">
-          <ProofIcon className="size-16" />
-          <h2 className="mt-6 max-w-4xl text-5xl font-light leading-[1.05] tracking-normal">
+      <section className="px-5 py-16 sm:px-8 lg:py-20">
+        <div className="mx-auto max-w-[92rem] rounded-2xl bg-[#080808] p-7 text-white sm:p-10">
+          <ProofIcon className="size-12" />
+          <h2 className="mt-5 max-w-4xl text-3xl font-light leading-[1.05] tracking-normal sm:text-5xl">
             Built for brands that want calm delivery and sharper growth decisions.
           </h2>
-          <div className="mt-8 flex items-center gap-4">
-            <AwardIcon className="size-14" />
+          <div className="mt-6 flex items-center gap-4">
+            <AwardIcon className="size-10" />
             <p className="max-w-xl text-sm font-bold leading-7 text-white/66">
               Senior strategy, polished creative, and clear reporting inside one growth rhythm.
             </p>

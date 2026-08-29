@@ -79,23 +79,23 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbfaf8] text-[#080808]">
       <section className="relative isolate overflow-hidden bg-[#fbfaf8]">
-        <div className="absolute inset-x-0 top-24 h-[36rem] bg-[radial-gradient(circle_at_48%_28%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_45%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_62%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_54%,rgba(170,124,255,.18),transparent_28%)]" />
+        <div className="absolute inset-x-0 top-20 h-[30rem] bg-[radial-gradient(circle_at_48%_28%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_45%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_62%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_54%,rgba(170,124,255,.18),transparent_28%)]" />
         <Header />
 
-        <div className="relative z-10 mx-auto grid max-w-[92rem] gap-12 px-5 pb-20 pt-14 sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-24 lg:pt-24">
+        <div className="relative z-10 mx-auto grid max-w-[92rem] gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-20 lg:pt-20">
           <div>
-            <h1 className="max-w-[58rem] text-[3.7rem] font-light leading-[0.96] tracking-normal sm:text-[5.4rem] lg:text-[6.35rem]">
+            <h1 className="max-w-[54rem] text-[3.1rem] font-light leading-[0.96] tracking-normal sm:text-[4.6rem] lg:text-[5.45rem]">
               <span className="block font-serif italic">Marketing that performs.</span>
               <span className="block">experiences that convert</span>
             </h1>
-            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <Button asChild className="h-16 rounded-2xl bg-[#080808] px-9 text-base font-black text-white hover:bg-[#145cff]">
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
+              <Button asChild className="h-14 rounded-xl bg-[#080808] px-8 text-base font-black text-white hover:bg-[#145cff]">
                 <Link href="/contact-us">
                   Let&apos;s Talk
                   <ArrowRight className="size-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="h-16 rounded-2xl border-[#111] bg-white/50 px-9 text-base font-black text-[#080808] hover:bg-white">
+              <Button asChild variant="outline" className="h-14 rounded-xl border-[#111] bg-white/50 px-8 text-base font-black text-[#080808] hover:bg-white">
                 <Link href="/projects">
                   View Our Work
                   <ArrowRight className="size-5" />
@@ -106,7 +106,7 @@ export default function Home() {
 
           <div>
             <div className="relative">
-              <div className="relative h-[29rem] overflow-hidden rounded-[2rem] bg-[#e8edf2] shadow-[0_26px_90px_rgba(16,24,40,.14)]">
+              <div className="relative h-[25rem] overflow-hidden rounded-[2rem] bg-[#e8edf2] shadow-[0_26px_90px_rgba(16,24,40,.14)]">
                 <Image
                   src="/heron-hero-office.png"
                   alt="Heron Marketing strategists reviewing a growth plan"
@@ -130,17 +130,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden px-5 py-24 sm:px-8 lg:py-32">
+      <section className="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-20">
         <div className="absolute right-0 top-8 h-96 w-96 bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <p className="text-xl font-black">What We Do</p>
-          <div className="mt-10 grid border-black/10 lg:grid-cols-5">
+          <div className="mt-6 grid border-black/10 lg:grid-cols-5">
             {services.map((service) => (
-              <article key={service.title} className="border-b border-black/12 py-8 lg:border-b-0 lg:border-r lg:px-10 lg:first:pl-0 lg:last:border-r-0">
-                <service.icon className="size-14" />
-                <h2 className="mt-10 text-2xl font-black">{service.title}</h2>
-                <p className="mt-5 max-w-xs text-sm leading-7 text-[#666]">{service.copy}</p>
-                <Link href="/services" className="mt-8 inline-flex text-[#080808] transition hover:text-[#145cff]" aria-label={`Explore ${service.title}`}>
+              <article key={service.title} className="border-b border-black/12 py-6 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0">
+                <service.icon className="size-12" />
+                <h2 className="mt-5 text-xl font-black">{service.title}</h2>
+                <p className="mt-4 max-w-xs text-sm leading-6 text-[#666]">{service.copy}</p>
+                <Link href="/services" className="mt-5 inline-flex text-[#080808] transition hover:text-[#145cff]" aria-label={`Explore ${service.title}`}>
                   <ArrowRight className="size-5" />
                 </Link>
               </article>
@@ -149,30 +149,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-24 sm:px-8 lg:pb-32">
-        <div className="mx-auto grid max-w-[92rem] gap-14 lg:grid-cols-[1fr_1fr] lg:items-start">
+      <section className="px-5 pb-16 sm:px-8 lg:pb-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
             <span className="inline-flex rounded-full border border-black/28 px-4 py-1 text-sm font-black text-[#555]">
               About Us
             </span>
-            <h2 className="mt-7 max-w-4xl text-5xl font-light leading-[1.03] tracking-normal sm:text-6xl">
+            <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
               <span className="font-serif italic">Crafting campaigns that deliver</span>
               <br />
               results and delight customers
             </h2>
-            <p className="mt-9 max-w-3xl text-lg font-medium leading-9 text-[#222]">
+            <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-[#222]">
               We are a creative growth studio specializing in sharp strategy,
               high-converting digital experiences, and marketing systems that
               help ambitious brands scale with confidence.
             </p>
 
-            <div className="mt-14 grid gap-9">
+            <div className="mt-6 grid gap-6">
               {aboutHighlights.map(([title, copy, Icon]) => (
                 <div key={title as string} className="grid gap-5 sm:grid-cols-[4rem_1fr]">
                   <Icon className="size-14" />
                   <div>
-                    <h3 className="text-2xl font-black">{title as string}</h3>
-                    <p className="mt-3 text-lg leading-7 text-[#333]">{copy as string}</p>
+                    <h3 className="text-xl font-black">{title as string}</h3>
+                    <p className="mt-2 text-base leading-7 text-[#333]">{copy as string}</p>
                   </div>
                 </div>
               ))}
@@ -180,7 +180,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="relative h-[31rem] overflow-hidden rounded-[2rem] bg-[#e8edf2]">
+            <div className="relative h-[26rem] overflow-hidden rounded-[2rem] bg-[#e8edf2]">
               <Image
                 src="/heron-about-home.png"
                 alt="Heron strategist designing digital growth systems"
@@ -189,7 +189,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-10 grid gap-6 sm:grid-cols-[7rem_1fr] sm:items-center">
+            <div className="mt-6 grid gap-6 sm:grid-cols-[7rem_1fr] sm:items-center">
               <AwardIcon className="size-20" />
               <div>
                 <blockquote className="font-serif text-3xl italic leading-tight text-[#555]">
@@ -203,9 +203,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-24 sm:px-8 lg:pb-32">
-        <div className="mx-auto grid max-w-[92rem] gap-14 lg:grid-cols-[0.72fr_1.05fr] lg:items-center">
-          <div className="relative h-[27rem] overflow-hidden rounded-[1.2rem] bg-[#e8edf2]">
+      <section className="px-5 pb-16 sm:px-8 lg:pb-20">
+        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.05fr] lg:items-center">
+          <div className="relative h-[23rem] overflow-hidden rounded-[1.2rem] bg-[#e8edf2]">
             <Image
               src="/heron-growth-command.png"
               alt="Heron team collaborating on a digital growth campaign"
@@ -216,13 +216,13 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-black">Our Process</p>
-            <div className="mt-10 grid gap-9 md:grid-cols-4">
+            <div className="mt-6 grid gap-9 md:grid-cols-4">
               {process.map(([number, title, copy], index) => (
                 <article key={number}>
-                  <p className={`text-5xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
+                  <p className={`text-4xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
                     {number}
                   </p>
-                  <div className="mt-7 h-px bg-black/18" />
+                  <div className="mt-5 h-px bg-black/18" />
                   <h3 className="mt-5 text-lg font-black">{title}</h3>
                   <p className="mt-4 text-sm leading-7 text-[#666]">{copy}</p>
                 </article>
@@ -232,12 +232,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-24 sm:px-8 lg:pb-32">
+      <section className="px-5 pb-16 sm:px-8 lg:pb-20">
         <div className="mx-auto max-w-[92rem]">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-black text-[#145cff]">Selected Work</p>
-              <h2 className="mt-4 max-w-2xl text-5xl font-light leading-[1.04] tracking-normal sm:text-6xl">
+              <h2 className="mt-4 max-w-2xl text-4xl font-light leading-[1.04] tracking-normal sm:text-5xl">
                 <span className="font-serif">Campaign systems</span>
                 <br />
                 with measurable outcomes
@@ -251,9 +251,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-10 grid gap-7 lg:grid-cols-3">
+          <div className="mt-6 grid gap-5 lg:grid-cols-3">
             {work.map(([title, label, image]) => (
-              <article key={title} className="group relative h-72 overflow-hidden rounded-2xl bg-[#101828] text-white">
+              <article key={title} className="group relative h-60 overflow-hidden rounded-2xl bg-[#101828] text-white">
                 <Image
                   src={image}
                   alt={title}
@@ -277,26 +277,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/8 bg-white px-5 py-20 sm:px-8">
-        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-3">
+      <section className="border-y border-black/8 bg-white px-5 py-14 sm:px-8">
+        <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
           {[
             ["38%", "Average increase in qualified leads within 90 days"],
             ["4.8x", "Average return on ad spend across campaigns"],
             ["90 days", "Typical time to meaningful performance lift"],
           ].map(([value, label]) => (
             <div key={value} className="border-black/12 text-center md:border-r md:last:border-r-0">
-              <p className="font-serif text-7xl font-light">{value}</p>
+              <p className="font-serif text-5xl font-light">{value}</p>
               <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-[#555]">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="px-5 py-24 sm:px-8 lg:py-32">
+      <section className="px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
             <p className="text-sm font-black text-[#145cff]">What Clients Say</p>
-            <blockquote className="mt-6 max-w-4xl font-serif text-4xl italic leading-tight sm:text-5xl">
+            <blockquote className="mt-5 max-w-4xl font-serif text-3xl italic leading-tight sm:text-4xl">
               “Heron Marketing became an extension of our team. Their strategy,
               execution, and communication are world-class.”
             </blockquote>
@@ -318,7 +318,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 pb-24 sm:px-8 lg:pb-32">
+      <section className="px-5 pb-16 sm:px-8 lg:pb-20">
         <div className="mx-auto max-w-[92rem]">
           <p className="text-sm font-black text-[#145cff]">Frequently Asked Questions</p>
           <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white">
@@ -340,13 +340,13 @@ export default function Home() {
       </section>
 
       <section className="px-5 pb-12 sm:px-8">
-        <div className="relative mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl bg-[#050505] px-6 py-12 text-white sm:px-10 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-16">
+        <div className="relative mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl bg-[#050505] px-6 py-10 text-white sm:px-10 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-12">
           <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_72%_50%,rgba(124,232,217,.62),transparent_34%),radial-gradient(circle_at_90%_30%,rgba(20,92,255,.5),transparent_26%)]" />
           <div className="relative z-10">
-            <h2 className="max-w-xl text-5xl font-light leading-[1.05] tracking-normal">
+            <h2 className="max-w-xl text-4xl font-light leading-[1.05] tracking-normal">
               Ready to build your next growth system?
             </h2>
-            <div className="mt-9 flex flex-col gap-5 border-t border-white/18 pt-8 sm:flex-row sm:items-center">
+            <div className="mt-5 flex flex-col gap-5 border-t border-white/18 pt-8 sm:flex-row sm:items-center">
               <Button asChild className="h-14 rounded-xl bg-white px-7 font-black text-[#080808] hover:bg-[#b9f6e8]">
                 <Link href="/contact-us">
                   Start a Project
