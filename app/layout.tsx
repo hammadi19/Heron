@@ -16,8 +16,19 @@ export const metadata: Metadata = {
   title: "Heron Marketing | Growth Systems for Ambitious Brands",
   description:
     "Heron Marketing builds high-clarity growth systems across strategy, creative, paid media, search, lifecycle marketing, and analytics.",
+  manifest: "/site.webmanifest",
   icons: {
-    icon: "/heron-logo-mark.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     title: "Heron Marketing | Growth Systems for Ambitious Brands",
