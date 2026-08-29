@@ -6,7 +6,7 @@ import {
   Star,
 } from "lucide-react";
 
-import { Footer, Header } from "@/components/site/shared";
+import { Eyebrow, Footer, Header } from "@/components/site/shared";
 import { Button } from "@/components/ui/button";
 import {
   AnalyticsIcon,
@@ -78,11 +78,11 @@ const faqs = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbfaf8] text-[#080808]">
-      <section className="relative isolate overflow-hidden bg-[#fbfaf8]">
-        <div className="absolute inset-x-0 top-20 h-[30rem] bg-[radial-gradient(circle_at_48%_28%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_45%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_62%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_54%,rgba(170,124,255,.18),transparent_28%)]" />
+      <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#fbfaf8]">
+        <div className="absolute inset-x-0 top-20 h-[calc(100%-5rem)] bg-[radial-gradient(circle_at_48%_28%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_45%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_62%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_54%,rgba(170,124,255,.18),transparent_28%)]" />
         <Header />
 
-        <div className="relative z-10 mx-auto grid max-w-[92rem] gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-20 lg:pt-20">
+        <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-10 px-5 pb-14 pt-10 sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-20 lg:pt-20">
           <div>
             <h1 className="max-w-[54rem] text-[3.1rem] font-light leading-[0.96] tracking-normal sm:text-[4.6rem] lg:text-[5.45rem]">
               <span className="block font-serif italic">Marketing that performs.</span>
@@ -133,7 +133,7 @@ export default function Home() {
       <section className="relative overflow-hidden px-5 py-16 sm:px-8 lg:py-20">
         <div className="absolute right-0 top-8 h-96 w-96 bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
-          <p className="text-xl font-black">What We Do</p>
+          <Eyebrow>What We Do</Eyebrow>
           <div className="mt-6 grid border-black/10 lg:grid-cols-5">
             {services.map((service) => (
               <article key={service.title} className="border-b border-black/12 py-6 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0">
@@ -152,9 +152,7 @@ export default function Home() {
       <section className="px-5 pb-16 sm:px-8 lg:pb-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div>
-            <span className="inline-flex rounded-full border border-black/28 px-4 py-1 text-sm font-black text-[#555]">
-              About Us
-            </span>
+            <Eyebrow>About Us</Eyebrow>
             <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
               <span className="font-serif italic">Crafting campaigns that deliver</span>
               <br />
@@ -215,7 +213,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="text-sm font-black">Our Process</p>
+            <Eyebrow>Our Process</Eyebrow>
             <div className="mt-6 grid gap-9 md:grid-cols-4">
               {process.map(([number, title, copy], index) => (
                 <article key={number}>
@@ -236,7 +234,7 @@ export default function Home() {
         <div className="mx-auto max-w-[92rem]">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm font-black text-[#145cff]">Selected Work</p>
+              <Eyebrow>Selected Work</Eyebrow>
               <h2 className="mt-4 max-w-2xl text-4xl font-light leading-[1.04] tracking-normal sm:text-5xl">
                 <span className="font-serif">Campaign systems</span>
                 <br />
@@ -295,7 +293,7 @@ export default function Home() {
       <section className="px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="text-sm font-black text-[#145cff]">What Clients Say</p>
+            <Eyebrow>What Clients Say</Eyebrow>
             <blockquote className="mt-5 max-w-4xl font-serif text-3xl italic leading-tight sm:text-4xl">
               “Heron Marketing became an extension of our team. Their strategy,
               execution, and communication are world-class.”
@@ -320,7 +318,7 @@ export default function Home() {
 
       <section className="px-5 pb-16 sm:px-8 lg:pb-20">
         <div className="mx-auto max-w-[92rem]">
-          <p className="text-sm font-black text-[#145cff]">Frequently Asked Questions</p>
+          <Eyebrow>Frequently Asked Questions</Eyebrow>
           <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white">
             {faqs.map((faq) => (
               <details key={faq} className="group border-b border-black/10 px-6 py-5 last:border-b-0">

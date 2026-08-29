@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { Footer, PageHero, ServiceGrid, services } from "@/components/site/shared";
+import { Eyebrow, Footer, PageHero, ServiceGrid, services } from "@/components/site/shared";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesPage() {
@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <section className="border-y border-black/8 bg-white px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
-            <p className="text-sm font-black text-[#145cff]">Sprint Menu</p>
+            <Eyebrow>Sprint Menu</Eyebrow>
             <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal">
               Build only what the growth bottleneck needs.
             </h2>
@@ -30,8 +30,8 @@ export default function ServicesPage() {
               <article key={service.title} className="border border-black/10 bg-[#fbfaf8] p-6">
                 <h3 className="text-xl font-black">{service.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-[#666]">{service.copy}</p>
-                <p className="mt-4 flex items-center gap-2 text-sm font-black text-[#145cff]">
-                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-[#eef4ff] text-[0.7rem] text-[#145cff]">
+                <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-black/18 px-3 py-1 text-xs font-black text-[#555]">
+                  <span className="grid size-4 shrink-0 place-items-center rounded-full bg-[#080808] text-[0.62rem] text-white">
                     ✓
                   </span>
                   Sprint-ready deliverables

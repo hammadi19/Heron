@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { Footer, PageHero } from "@/components/site/shared";
+import { Eyebrow, Footer, PageHero } from "@/components/site/shared";
 import {
   AnalyticsIcon,
   AwardIcon,
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="px-5 py-16 sm:px-8 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
           <div>
-            <p className="text-sm font-black text-[#145cff]">How we think</p>
+            <Eyebrow>How we think</Eyebrow>
             <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl">
               We make marketing easier to choose, launch, measure, and improve.
             </h2>

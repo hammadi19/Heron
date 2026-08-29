@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
   LayoutDashboard,
@@ -91,6 +92,14 @@ export const faqs = [
   ["Can we start small?", "Yes. A focused audit or sprint is the easiest way to prove the direction before moving into ongoing support."],
 ];
 
+export function Eyebrow({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex rounded-full border border-black/28 px-4 py-1 text-sm font-black text-[#555]">
+      {children}
+    </span>
+  );
+}
+
 export function Header({ inverted = false }: { inverted?: boolean }) {
   return (
     <header className={`relative z-20 border-b px-5 py-5 sm:px-8 ${inverted ? "border-white/14 bg-transparent" : "border-black/8 bg-white/92 backdrop-blur-xl"}`}>
@@ -137,7 +146,7 @@ export function PageHero({
       <Header />
       <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:py-20">
         <div>
-          <p className="text-sm font-black text-[#145cff]">{eyebrow}</p>
+          <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
             <span className="font-serif italic">{title.split(" ").slice(0, 2).join(" ")}</span>{" "}
             {title.split(" ").slice(2).join(" ")}
@@ -175,7 +184,9 @@ export function SectionTitle({
   return (
     <div className={align === "center" ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       {eyebrow ? (
-        <p className="mb-4 text-sm font-black text-[#145cff]">{eyebrow}</p>
+        <div className="mb-4">
+          <Eyebrow>{eyebrow}</Eyebrow>
+        </div>
       ) : null}
       <h2 className="text-3xl font-light leading-[1.06] tracking-normal text-[#080808] sm:text-5xl">
         {title}
