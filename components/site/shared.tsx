@@ -4,10 +4,8 @@ import type { ReactNode } from "react";
 import {
   ArrowRight,
   LayoutDashboard,
-  Search,
 } from "lucide-react";
 
-import { SiteDrawer } from "@/components/site/drawer";
 import { HeronLogo } from "@/components/site/logo";
 import {
   AnalyticsIcon,
@@ -113,18 +111,21 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
           ))}
         </nav>
         <div className={`flex items-center gap-3 ${inverted ? "text-white" : "text-[#111]"}`}>
-          <Search className="size-5 opacity-80" />
           <Link
             href="/contact-us"
-            className={`hidden h-12 items-center gap-2 rounded-xl px-6 text-sm font-black transition sm:inline-flex ${
+            className={`group inline-flex h-12 items-center gap-3 rounded-full px-5 text-sm font-black shadow-[0_18px_45px_rgba(8,8,8,.16)] transition duration-300 hover:-translate-y-0.5 sm:h-14 sm:px-7 ${
               inverted
                 ? "bg-white text-[#080808] hover:bg-[#b9f6e8]"
                 : "bg-[#080808] text-white hover:bg-[#145cff]"
             }`}
           >
-            Get In Touch
+            <span>Get In Touch</span>
+            <span className={`grid size-7 place-items-center rounded-full transition duration-300 group-hover:rotate-45 ${
+              inverted ? "bg-[#080808] text-white" : "bg-white text-[#080808]"
+            }`}>
+              <ArrowRight className="size-4" />
+            </span>
           </Link>
-          <SiteDrawer inverted={inverted} />
         </div>
       </div>
     </header>
