@@ -1,13 +1,26 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Footer, PageHero, PortfolioGrid } from "@/components/site/shared";
+import { AnalyticsIcon, ProofIcon, StrategyIcon } from "@/components/site/service-icons";
 import { Button } from "@/components/ui/button";
 
 const outcomes = [
-  ["Positioning", "Sharper offer, audience, and message direction."],
-  ["Acquisition", "Better channel mix, campaign structure, and landing flow."],
-  ["Measurement", "Clearer KPI dashboard and next-step reporting rhythm."],
+  {
+    title: "Positioning",
+    copy: "Sharper offer, audience, and message direction.",
+    icon: StrategyIcon,
+  },
+  {
+    title: "Acquisition",
+    copy: "Better channel mix, campaign structure, and landing flow.",
+    icon: ProofIcon,
+  },
+  {
+    title: "Measurement",
+    copy: "Clearer KPI dashboard and next-step reporting rhythm.",
+    icon: AnalyticsIcon,
+  },
 ];
 
 export default function ProjectsPage() {
@@ -25,11 +38,11 @@ export default function ProjectsPage() {
 
       <section className="border-y border-black/8 bg-white px-5 py-20 sm:px-8">
         <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
-          {outcomes.map(([title, copy]) => (
-            <article key={title} className="border-black/10 md:border-r md:pr-10 md:last:border-r-0">
-              <CheckCircle2 className="size-12 text-[#145cff]" />
-              <h3 className="mt-8 text-2xl font-black">{title}</h3>
-              <p className="mt-4 leading-7 text-[#666]">{copy}</p>
+          {outcomes.map((outcome) => (
+            <article key={outcome.title} className="border-black/10 md:border-r md:pr-10 md:last:border-r-0">
+              <outcome.icon className="size-16" />
+              <h3 className="mt-8 text-2xl font-black">{outcome.title}</h3>
+              <p className="mt-4 leading-7 text-[#666]">{outcome.copy}</p>
             </article>
           ))}
         </div>

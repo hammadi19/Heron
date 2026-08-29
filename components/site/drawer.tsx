@@ -6,10 +6,11 @@ import {
   AtSign,
   Globe2,
   Menu,
-  Send,
   Share2,
   X,
 } from "lucide-react";
+
+import { MailIcon, SendIcon } from "@/components/site/service-icons";
 
 export function SiteDrawer({ inverted = false }: { inverted?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -108,8 +109,9 @@ export function SiteDrawer({ inverted = false }: { inverted?: boolean }) {
               />
               <button
                 type="button"
-                className="h-16 w-full rounded-md bg-[#0074e8] px-10 text-lg font-extrabold text-white transition hover:bg-[#005fc0] sm:h-20 sm:w-[22rem] sm:text-xl"
+                className="inline-flex h-16 w-full items-center justify-center rounded-md bg-[#0074e8] px-10 text-lg font-extrabold text-white transition hover:bg-[#005fc0] sm:h-20 sm:w-[22rem] sm:text-xl"
               >
+                <SendIcon className="mr-3 size-8" />
                 Send Message
               </button>
             </form>
@@ -130,14 +132,14 @@ export function SiteDrawer({ inverted = false }: { inverted?: boolean }) {
               hello@heron-marketing.com
             </a>
             <div className="mt-10 flex justify-center gap-4">
-              {[Globe2, AtSign, Send, Share2].map((Icon, index) => (
+              {[Globe2, AtSign, MailIcon, Share2].map((Icon, index) => (
                 <a
                   key={index}
                   href="/contact-us"
                   aria-label={`Social link ${index + 1}`}
                   className="grid size-14 place-items-center rounded-full border border-[#d9d9d9] text-[#9c9c9c] transition hover:border-[#0074e8] hover:bg-[#0074e8] hover:text-white sm:size-16"
                 >
-                  <Icon className="size-6 sm:size-7" />
+                  <Icon className={index === 2 ? "size-10" : "size-6 sm:size-7"} />
                 </a>
               ))}
             </div>

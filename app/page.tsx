@@ -2,10 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Award,
-  Code2,
   Plus,
-  Rocket,
   Star,
 } from "lucide-react";
 
@@ -13,10 +10,13 @@ import { Footer, Header } from "@/components/site/shared";
 import { Button } from "@/components/ui/button";
 import {
   AnalyticsIcon,
+  AwardIcon,
   CreativeIcon,
+  LifecycleIcon,
   MediaIcon,
   SearchIcon,
   StrategyIcon,
+  WebIcon,
 } from "@/components/site/service-icons";
 
 const clients = ["Layer", "Cloudly", "Boltshift", "Lightbox", "Sitemark", "Vertex"];
@@ -51,8 +51,8 @@ const services = [
 
 const aboutHighlights = [
   ["Digital Strategy", "Positioning, offer clarity, campaign planning, and growth roadmaps.", StrategyIcon],
-  ["Conversion Systems", "Landing pages, funnels, lifecycle flows, and high-intent user journeys.", Code2],
-  ["Marketing Growth", "SEO, paid media, brand campaigns, analytics, and scalable demand systems.", Rocket],
+  ["Conversion Systems", "Landing pages, funnels, lifecycle flows, and high-intent user journeys.", WebIcon],
+  ["Marketing Growth", "SEO, paid media, brand campaigns, analytics, and scalable demand systems.", LifecycleIcon],
 ];
 
 const process = [
@@ -169,7 +169,7 @@ export default function Home() {
             <div className="mt-14 grid gap-9">
               {aboutHighlights.map(([title, copy, Icon]) => (
                 <div key={title as string} className="grid gap-5 sm:grid-cols-[4rem_1fr]">
-                  <Icon className="size-10 text-[#666]" />
+                  <Icon className="size-14" />
                   <div>
                     <h3 className="text-2xl font-black">{title as string}</h3>
                     <p className="mt-3 text-lg leading-7 text-[#333]">{copy as string}</p>
@@ -190,7 +190,7 @@ export default function Home() {
               />
             </div>
             <div className="mt-10 grid gap-6 sm:grid-cols-[7rem_1fr] sm:items-center">
-              <Award className="size-20 stroke-[1.4] text-[#555]" />
+              <AwardIcon className="size-20" />
               <div>
                 <blockquote className="font-serif text-3xl italic leading-tight text-[#555]">
                   “Marketing is not just how it looks, but how it works. We
@@ -310,7 +310,7 @@ export default function Home() {
               <p className="mt-1 text-sm text-[#666]">Head of Growth, Layer</p>
               <div className="mt-2 flex gap-1 text-[#f5a400]">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="size-4 fill-current" />
+                  <Star key={star} className="size-4 fill-current stroke-[2.2]" />
                 ))}
               </div>
             </div>

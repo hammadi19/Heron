@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Footer, PageHero } from "@/components/site/shared";
-import { AnalyticsIcon, CreativeIcon, StrategyIcon } from "@/components/site/service-icons";
+import {
+  AnalyticsIcon,
+  AwardIcon,
+  CreativeIcon,
+  ProofIcon,
+  StrategyIcon,
+} from "@/components/site/service-icons";
 import { Button } from "@/components/ui/button";
 
 const principles = [
@@ -36,7 +42,9 @@ export default function AboutPage() {
             <div className="mt-8 grid gap-3 font-bold text-[#333]">
               {["Strategy before spend", "Creative tied to customer intent", "Weekly decisions from real signals", "Clear handoff between marketing and sales"].map((item) => (
                 <p key={item} className="flex items-center gap-3">
-                  <Check className="size-5 text-[#145cff]" />
+                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[#eef4ff] text-sm font-black text-[#145cff]">
+                    ✓
+                  </span>
                   {item}
                 </p>
               ))}
@@ -68,10 +76,16 @@ export default function AboutPage() {
 
       <section className="px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-[92rem] rounded-2xl bg-[#080808] p-8 text-white sm:p-12">
-          <ShieldCheck className="size-12 text-[#7ce8d9]" />
+          <ProofIcon className="size-16" />
           <h2 className="mt-6 max-w-4xl text-5xl font-light leading-[1.05] tracking-normal">
             Built for brands that want calm delivery and sharper growth decisions.
           </h2>
+          <div className="mt-8 flex items-center gap-4">
+            <AwardIcon className="size-14" />
+            <p className="max-w-xl text-sm font-bold leading-7 text-white/66">
+              Senior strategy, polished creative, and clear reporting inside one growth rhythm.
+            </p>
+          </div>
         </div>
       </section>
 

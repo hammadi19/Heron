@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 import { Footer, PageHero } from "@/components/site/shared";
+import { MailIcon, PhoneIcon, PinIcon, SendIcon } from "@/components/site/service-icons";
 import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
@@ -25,17 +25,17 @@ export default function ContactPage() {
               improve fastest.
             </p>
             <div className="mt-10 grid gap-5">
-              <p className="flex gap-4 text-[#555]">
-                <Phone className="size-6 text-[#145cff]" />
-                +44 0000 000000
+              <p className="flex items-center gap-4 text-[#555]">
+                <PhoneIcon className="size-12 shrink-0" />
+                <span>+44 0000 000000</span>
               </p>
-              <p className="flex gap-4 text-[#555]">
-                <Mail className="size-6 text-[#145cff]" />
-                hello@heron-marketing.com
+              <p className="flex items-center gap-4 text-[#555]">
+                <MailIcon className="size-12 shrink-0" />
+                <span>hello@heron-marketing.com</span>
               </p>
-              <p className="flex gap-4 text-[#555]">
-                <MapPin className="size-6 text-[#145cff]" />
-                United Kingdom
+              <p className="flex items-center gap-4 text-[#555]">
+                <PinIcon className="size-12 shrink-0" />
+                <span>United Kingdom</span>
               </p>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function ContactPage() {
               </div>
               <textarea className="min-h-44 border border-black/10 bg-[#fbfaf8] p-4 text-sm outline-none focus:border-[#145cff]" placeholder="Tell us about your project" aria-label="Project details" />
               <Button type="button" className="h-14 justify-self-start rounded-xl bg-[#145cff] px-8 font-black text-white hover:bg-[#080808]">
-                <Send className="size-4" />
+                <SendIcon className="size-8" />
                 Send Message
               </Button>
             </form>

@@ -4,10 +4,7 @@ import {
   ArrowRight,
   ChevronDown,
   LayoutDashboard,
-  Mail,
-  Phone,
   Search,
-  Send,
 } from "lucide-react";
 
 import { SiteDrawer } from "@/components/site/drawer";
@@ -16,8 +13,11 @@ import {
   AnalyticsIcon,
   CreativeIcon,
   LifecycleIcon,
+  MailIcon,
   MediaIcon,
+  PhoneIcon,
   SearchIcon,
+  SendIcon,
   StrategyIcon,
 } from "@/components/site/service-icons";
 
@@ -301,7 +301,7 @@ export function Footer() {
                 type="button"
                 aria-label="Subscribe to newsletter"
               >
-                <Send className="size-6" />
+                <SendIcon className="size-10" />
               </button>
             </form>
           </div>
@@ -339,11 +339,11 @@ export function Footer() {
               <h3 className="text-xl font-black xl:text-2xl">Contact Us</h3>
               <div className="mt-7 grid gap-5 text-lg text-[#555]">
                 <p className="flex items-center gap-4">
-                  <Phone className="size-6 text-[#555]" />
+                  <PhoneIcon className="size-10 shrink-0" />
                   +44 0000 000000
                 </p>
                 <p className="flex items-center gap-4">
-                  <Mail className="size-6 text-[#555]" />
+                  <MailIcon className="size-10 shrink-0" />
                   hello@heron-marketing.com
                 </p>
               </div>

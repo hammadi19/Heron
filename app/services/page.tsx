@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Footer, PageHero, ServiceGrid, services } from "@/components/site/shared";
 import { Button } from "@/components/ui/button";
@@ -31,7 +31,9 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-black">{service.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-[#666]">{service.copy}</p>
                 <p className="mt-5 flex items-center gap-2 text-sm font-black text-[#145cff]">
-                  <Check className="size-4" />
+                  <span className="grid size-5 shrink-0 place-items-center rounded-full bg-[#eef4ff] text-[0.7rem] text-[#145cff]">
+                    ✓
+                  </span>
                   Sprint-ready deliverables
                 </p>
               </article>
