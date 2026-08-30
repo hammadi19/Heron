@@ -159,14 +159,33 @@ a {
   }
 }
 
+@keyframes heron-logo-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 .service-icon-float {
   animation: heron-icon-float 4.8s ease-in-out infinite;
   transform-origin: center;
   will-change: transform;
 }
 
+.logo-marquee-track {
+  animation: heron-logo-marquee 24s linear infinite;
+}
+
+.logo-marquee-track:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .service-icon-float {
+  .service-icon-float,
+  .logo-marquee-track {
     animation: none;
   }
 }

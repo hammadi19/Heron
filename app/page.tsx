@@ -19,7 +19,16 @@ import {
   WebIcon,
 } from "@/components/site/service-icons";
 
-const clients = ["Layer", "Cloudly", "Boltshift", "Lightbox", "Sitemark", "Vertex"];
+const clients = [
+  { name: "Layer", mark: "stack" },
+  { name: "Cloudly", mark: "cloud" },
+  { name: "Boltshift", mark: "bolt" },
+  { name: "Lightbox", mark: "frame" },
+  { name: "Sitemark", mark: "pin" },
+  { name: "Vertex", mark: "spark" },
+  { name: "Northline", mark: "wave" },
+  { name: "BloomIQ", mark: "bloom" },
+];
 
 const services = [
   {
@@ -75,6 +84,50 @@ const faqs = [
   "Do you offer ongoing support and optimization?",
 ];
 
+function DummyLogoMark({ type }: { type: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className="size-9 shrink-0" aria-hidden="true">
+      {type === "stack" ? (
+        <>
+          <rect x="10" y="12" width="26" height="26" rx="7" fill="#101010" opacity="0.1" />
+          <rect x="15" y="9" width="26" height="26" rx="7" fill="#101010" />
+        </>
+      ) : null}
+      {type === "cloud" ? (
+        <path fill="#101010" d="M16.4 33h17.2c5.1 0 8.4-3.1 8.4-7.4c0-4-2.9-7-7.1-7.3C33.3 14 29.3 11 24.6 11c-5.6 0-10.1 4-10.7 9.3C9.4 21 6 23.7 6 27.5C6 30.8 8.8 33 16.4 33Z" />
+      ) : null}
+      {type === "bolt" ? (
+        <path fill="#101010" d="M28.5 4L10 27.6h13.1L19.4 44L38 20.1H24.8L28.5 4Z" />
+      ) : null}
+      {type === "frame" ? (
+        <>
+          <rect x="9" y="10" width="30" height="28" rx="6" fill="none" stroke="#101010" strokeWidth="5" />
+          <circle cx="19" cy="21" r="4" fill="#101010" />
+          <path d="M16 32l7-7l5 5l4-4l5 6" fill="none" stroke="#101010" strokeWidth="4" strokeLinecap="round" />
+        </>
+      ) : null}
+      {type === "pin" ? (
+        <path fill="#101010" d="M24 5c-7.1 0-12.9 5.4-12.9 12.1c0 9.2 12.9 25.9 12.9 25.9s12.9-16.7 12.9-25.9C36.9 10.4 31.1 5 24 5Zm0 17.2a5 5 0 1 1 0-10a5 5 0 0 1 0 10Z" />
+      ) : null}
+      {type === "spark" ? (
+        <path fill="#101010" d="M24 4l5.3 14.7L44 24l-14.7 5.3L24 44l-5.3-14.7L4 24l14.7-5.3L24 4Z" />
+      ) : null}
+      {type === "wave" ? (
+        <path fill="none" stroke="#101010" strokeWidth="6" strokeLinecap="round" d="M6 29c7.5-13 14.9-13 22.4 0c4.6 8 9.1 8 13.6 0" />
+      ) : null}
+      {type === "bloom" ? (
+        <>
+          <circle cx="24" cy="24" r="6" fill="#101010" />
+          <circle cx="24" cy="10" r="6" fill="#101010" opacity="0.8" />
+          <circle cx="38" cy="24" r="6" fill="#101010" opacity="0.8" />
+          <circle cx="24" cy="38" r="6" fill="#101010" opacity="0.8" />
+          <circle cx="10" cy="24" r="6" fill="#101010" opacity="0.8" />
+        </>
+      ) : null}
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbfaf8] text-[#080808]">
@@ -120,11 +173,23 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/8 bg-white px-5 py-9 sm:px-8">
-        <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-[1.4fr_repeat(6,1fr)] md:items-center">
-          <p className="text-sm font-black">Trusted by growth-focused teams</p>
-          {clients.map((client) => (
-            <p key={client} className="text-lg font-black text-[#777]">{client}</p>
-          ))}
+        <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-[16rem_1fr] md:items-center">
+          <p className="text-sm font-black leading-5">Trusted by growth-focused teams</p>
+          <div className="relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+            <div className="logo-marquee-track flex w-max items-center gap-6">
+              {[...clients, ...clients].map((client, index) => (
+                <div
+                  key={`${client.name}-${index}`}
+                  className="flex h-16 min-w-48 items-center gap-3 rounded-full border border-black/8 bg-[#fbfaf8] px-5 text-[#101010] shadow-[0_12px_40px_rgba(16,24,40,.04)]"
+                >
+                  <DummyLogoMark type={client.mark} />
+                  <span className="text-xl font-black text-[#6c6c6c]">{client.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
