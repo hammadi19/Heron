@@ -31,7 +31,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
     >
       <div
         className={`mx-auto flex max-w-[92rem] items-center justify-between gap-6 transition-all duration-300 ${
-          scrolled ? "[&_img]:h-10" : "[&_img]:h-14"
+          scrolled ? "[&_.site-logo-lockup]:h-10" : "[&_.site-logo-lockup]:h-14"
         }`}
       >
         <HeronLogo inverted={inverted && !scrolled} />
