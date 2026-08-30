@@ -135,7 +135,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.18),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.13),transparent_30%),radial-gradient(circle_at_35%_42%,rgba(170,124,255,.14),transparent_28%)] sm:bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_42%,rgba(170,124,255,.18),transparent_28%)]" />
         <div className="hero-hover-field pointer-events-none absolute inset-0" />
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
-          <div>
+          <div className="min-w-0">
             <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
               <span className="block font-serif italic">Marketing that performs.</span>
               <span className="block">experiences that convert</span>
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div className="relative">
               <div className="relative h-[17.5rem] overflow-hidden rounded-[1.35rem] bg-[#e8edf2] shadow-[0_26px_90px_rgba(16,24,40,.14)] min-[380px]:h-[19rem] sm:h-[25rem] sm:rounded-[2rem]">
                 <Image
@@ -198,9 +198,9 @@ export default function Home() {
         <div className="absolute right-0 top-8 h-56 w-56 bg-[radial-gradient(circle,rgba(170,124,255,.14),transparent_68%)] sm:h-96 sm:w-96 sm:bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <Eyebrow>What We Do</Eyebrow>
-          <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
             {services.map((service, index) => (
-              <article key={service.title} className="min-w-[78vw] snap-start rounded-2xl border border-black/10 bg-white/74 p-5 shadow-[0_18px_50px_rgba(16,24,40,.05)] lg:min-w-0 lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
+              <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-black/10 bg-white/74 p-5 shadow-[0_18px_50px_rgba(16,24,40,.05)] lg:w-auto lg:flex-auto lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
                 <service.icon
                   className="service-icon-float size-12"
                   style={{ animationDelay: `${index * 0.32}s` }}
@@ -218,7 +218,7 @@ export default function Home() {
 
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
-          <div>
+          <div className="min-w-0">
             <Eyebrow>About Us</Eyebrow>
             <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
               <span className="font-serif italic">Crafting campaigns that deliver</span>
@@ -231,9 +231,9 @@ export default function Home() {
               help ambitious brands scale with confidence.
             </p>
 
-            <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:grid sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0">
+            <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 sm:grid sm:gap-6 sm:overflow-visible sm:pb-0">
               {aboutHighlights.map(([title, copy, Icon]) => (
-                <div key={title as string} className="min-w-[82vw] snap-start rounded-2xl border border-black/10 bg-white p-5 sm:min-w-0 sm:grid sm:grid-cols-[4rem_1fr] sm:border-0 sm:bg-transparent sm:p-0">
+                <div key={title as string} className="w-[82vw] flex-none snap-start rounded-2xl border border-black/10 bg-white p-5 sm:grid sm:w-auto sm:flex-auto sm:grid-cols-[4rem_1fr] sm:border-0 sm:bg-transparent sm:p-0">
                   <Icon className="size-14" />
                   <div>
                     <h3 className="text-xl font-black">{title as string}</h3>
@@ -244,7 +244,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#e8edf2] sm:h-[26rem] sm:rounded-[2rem]">
               <Image
                 src="/heron-about-home.png"
@@ -279,11 +279,11 @@ export default function Home() {
               className="object-cover"
             />
           </div>
-          <div>
+          <div className="min-w-0">
             <Eyebrow>Our Process</Eyebrow>
-            <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 md:mx-0 md:grid md:grid-cols-4 md:gap-9 md:overflow-visible md:px-0 md:pb-0">
+            <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-4 md:gap-9 md:overflow-visible md:pb-0">
               {process.map(([number, title, copy], index) => (
-                <article key={number} className="min-w-[76vw] snap-start rounded-2xl border border-black/10 bg-white p-5 md:min-w-0 md:rounded-none md:border-0 md:bg-transparent md:p-0">
+                <article key={number} className="w-[76vw] flex-none snap-start rounded-2xl border border-black/10 bg-white p-5 md:w-auto md:flex-auto md:rounded-none md:border-0 md:bg-transparent md:p-0">
                   <p className={`text-4xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
                     {number}
                   </p>
@@ -316,9 +316,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
             {work.map(([title, label, image]) => (
-              <article key={title} className="group relative h-56 min-w-[84vw] snap-start overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60 lg:min-w-0">
+              <article key={title} className="group relative h-56 w-[84vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60 lg:w-auto lg:flex-auto">
                 <Image
                   src={image}
                   alt={title}
@@ -343,13 +343,13 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/8 bg-white px-4 py-12 sm:px-8 sm:py-14">
-        <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
+        <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
           {[
             ["38%", "Average increase in qualified leads within 90 days"],
             ["4.8x", "Average return on ad spend across campaigns"],
             ["90 days", "Typical time to meaningful performance lift"],
           ].map(([value, label]) => (
-            <div key={value} className="min-w-[74vw] snap-start rounded-2xl border border-black/10 bg-[#fbfaf8] p-6 text-center md:min-w-0 md:rounded-none md:border-0 md:border-r md:bg-transparent md:p-0 md:last:border-r-0">
+            <div key={value} className="w-[74vw] flex-none snap-start rounded-2xl border border-black/10 bg-[#fbfaf8] p-6 text-center md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:bg-transparent md:p-0 md:last:border-r-0">
               <p className="font-serif text-5xl font-light">{value}</p>
               <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-[#555]">{label}</p>
             </div>
