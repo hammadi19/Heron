@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 
+import { Header } from "@/components/site/header";
 import { HeronLogo } from "@/components/site/logo";
 import {
   AnalyticsIcon,
@@ -19,14 +20,7 @@ import {
   StrategyIcon,
 } from "@/components/site/service-icons";
 
-export const navLinks = [
-  ["Home", "/"],
-  ["About Us", "/about-us"],
-  ["Services", "/services"],
-  ["Projects", "/projects"],
-  ["Blog", "/blog"],
-  ["Contact Us", "/contact-us"],
-];
+export { Header };
 
 export const services = [
   {
@@ -98,40 +92,6 @@ export function Eyebrow({ children }: { children: ReactNode }) {
   );
 }
 
-export function Header({ inverted = false }: { inverted?: boolean }) {
-  return (
-    <header className={`relative z-20 border-b px-5 py-5 sm:px-8 ${inverted ? "border-white/14 bg-transparent" : "border-black/8 bg-white/92 backdrop-blur-xl"}`}>
-      <div className="mx-auto flex max-w-[92rem] items-center justify-between gap-6">
-        <HeronLogo inverted={inverted} />
-        <nav className={`hidden items-center gap-8 text-[0.9rem] font-black lg:flex ${inverted ? "text-white/82" : "text-[#111]"}`}>
-          {navLinks.map(([label, href]) => (
-            <Link key={href} href={href} className="transition hover:text-[#145cff]">
-              {label}
-            </Link>
-          ))}
-        </nav>
-        <div className={`flex items-center gap-3 ${inverted ? "text-white" : "text-[#111]"}`}>
-          <Link
-            href="/contact-us"
-            className={`group inline-flex h-12 items-center gap-3 rounded-full px-5 text-sm font-black shadow-[0_18px_45px_rgba(8,8,8,.16)] transition duration-300 hover:-translate-y-0.5 sm:h-14 sm:px-7 ${
-              inverted
-                ? "bg-white text-[#080808] hover:bg-[#b9f6e8]"
-                : "bg-[#080808] text-white hover:bg-[#145cff]"
-            }`}
-          >
-            <span>Get In Touch</span>
-            <span className={`grid size-7 place-items-center rounded-full transition duration-300 group-hover:rotate-45 ${
-              inverted ? "bg-[#080808] text-white" : "bg-white text-[#080808]"
-            }`}>
-              <ArrowRight className="size-4" />
-            </span>
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export function PageHero({
   eyebrow,
   title,
@@ -145,7 +105,7 @@ export function PageHero({
     <section className="relative isolate overflow-hidden bg-[#fbfaf8] text-[#080808]">
       <div className="absolute inset-x-0 top-16 h-[20rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
       <Header />
-      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:py-20">
+      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 pb-14 pt-32 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-36">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
