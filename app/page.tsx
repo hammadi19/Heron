@@ -133,9 +133,12 @@ export default function Home() {
         <div className="relative mx-auto max-w-[92rem]">
           <Eyebrow>What We Do</Eyebrow>
           <div className="mt-6 grid border-black/10 lg:grid-cols-5">
-            {services.map((service) => (
+            {services.map((service, index) => (
               <article key={service.title} className="border-b border-black/12 py-6 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0">
-                <service.icon className="size-12" />
+                <service.icon
+                  className="service-icon-float size-12"
+                  style={{ animationDelay: `${index * 0.32}s` }}
+                />
                 <h2 className="mt-5 text-xl font-black">{service.title}</h2>
                 <p className="mt-4 max-w-xs text-sm leading-6 text-[#666]">{service.copy}</p>
                 <Link href="/services" className="mt-5 inline-flex text-[#080808] transition hover:text-[#145cff]" aria-label={`Explore ${service.title}`}>

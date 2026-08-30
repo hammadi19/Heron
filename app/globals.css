@@ -143,3 +143,30 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
+
+@keyframes heron-icon-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  35% {
+    transform: translate3d(0, -7px, 0) rotate(-2deg) scale(1.035);
+  }
+
+  70% {
+    transform: translate3d(0, 3px, 0) rotate(1.5deg) scale(0.99);
+  }
+}
+
+.service-icon-float {
+  animation: heron-icon-float 4.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-icon-float {
+    animation: none;
+  }
+}

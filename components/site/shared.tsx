@@ -167,12 +167,15 @@ export function SectionTitle({
 export function ServiceGrid() {
   return (
     <div className="mx-auto grid max-w-[92rem] border border-black/10 bg-white md:grid-cols-2 lg:grid-cols-3">
-      {services.map((service) => (
+      {services.map((service, index) => (
         <article
           key={service.title}
           className="group border-b border-r border-black/10 p-6 transition hover:bg-[#fbfaf8] md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
         >
-          <service.icon className="size-12" />
+          <service.icon
+            className="service-icon-float size-12"
+            style={{ animationDelay: `${index * 0.32}s` }}
+          />
           <h3 className="mt-6 text-xl font-black">{service.title}</h3>
           <p className="mt-3 min-h-20 text-sm leading-6 text-[#666]">{service.copy}</p>
           <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#080808] transition group-hover:text-[#145cff]">
