@@ -10,13 +10,17 @@ import { HeronLogo } from "@/components/site/logo";
 import {
   AnalyticsIcon,
   CreativeIcon,
+  FacebookIcon,
   LifecycleIcon,
+  LinkedInIcon,
   MailIcon,
   MediaIcon,
   PhoneIcon,
+  PinterestIcon,
   SearchIcon,
   SendIcon,
   StrategyIcon,
+  XIcon,
 } from "@/components/site/service-icons";
 
 export const services = [
@@ -79,6 +83,13 @@ export const faqs = [
   ["Do you handle creative and media?", "Yes. The model connects message, creative, paid media, search, reporting, and follow-up into one operating rhythm."],
   ["How do we measure success?", "We agree the commercial signals first: qualified enquiries, pipeline quality, return on spend, conversion rate, and learning velocity."],
   ["Can we start small?", "Yes. A focused audit or sprint is the easiest way to prove the direction before moving into ongoing support."],
+];
+
+const socialLinks = [
+  { label: "Facebook", Icon: FacebookIcon },
+  { label: "LinkedIn", Icon: LinkedInIcon },
+  { label: "X", Icon: XIcon },
+  { label: "Pinterest", Icon: PinterestIcon },
 ];
 
 export function Eyebrow({ children }: { children: ReactNode }) {
@@ -266,10 +277,16 @@ export function Footer() {
               Copyright 2026 <span className="font-black text-[#080808]">Heron</span> | All Right Reserved.
             </p>
             <div className="flex items-center gap-7 text-base font-black text-[#080808]">
-              <a href="/contact-us" aria-label="Facebook" className="hover:text-[#145cff]">f</a>
-              <a href="/contact-us" aria-label="LinkedIn" className="hover:text-[#145cff]">in</a>
-              <a href="/contact-us" aria-label="Twitter" className="hover:text-[#145cff]">x</a>
-              <a href="/contact-us" aria-label="Pinterest" className="hover:text-[#145cff]">p</a>
+              {socialLinks.map(({ label, Icon }) => (
+                <a
+                  key={label}
+                  href="/contact-us"
+                  aria-label={label}
+                  className="grid size-10 place-items-center rounded-full border border-black/10 text-[#080808] transition hover:-translate-y-0.5 hover:border-[#145cff] hover:bg-[#145cff] hover:text-white"
+                >
+                  <Icon className="size-4" />
+                </a>
+              ))}
             </div>
           </div>
         </div>

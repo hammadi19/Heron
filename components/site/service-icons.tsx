@@ -17,6 +17,10 @@ import phoneIcon from "@iconify-icons/solar/phone-calling-bold-duotone";
 import mailIcon from "@iconify-icons/solar/letter-bold-duotone";
 import pinIcon from "@iconify-icons/solar/map-point-bold-duotone";
 import sendIcon from "@iconify-icons/solar/plain-2-bold-duotone";
+import facebookIcon from "@iconify-icons/simple-icons/facebook";
+import linkedinIcon from "@iconify-icons/simple-icons/linkedin";
+import pinterestIcon from "@iconify-icons/simple-icons/pinterest";
+import xIcon from "@iconify-icons/simple-icons/x";
 
 type IconProps = Omit<ComponentProps<typeof Icon>, "icon">;
 type IconData = ComponentProps<typeof Icon>["icon"];
@@ -49,6 +53,21 @@ function MarketingIcon({
       icon={icon}
       className={className}
       color="#145CFF"
+      aria-hidden="true"
+      {...props}
+    />
+  );
+}
+
+function BrandIcon({
+  icon,
+  className,
+  ...props
+}: IconProps & { icon: IconData }) {
+  return (
+    <Icon
+      icon={icon}
+      className={className}
       aria-hidden="true"
       {...props}
     />
@@ -113,4 +132,20 @@ export function PinIcon(props: IconProps) {
 
 export function SendIcon(props: IconProps) {
   return <MarketingIcon icon={iconMap.send} {...props} />;
+}
+
+export function FacebookIcon(props: IconProps) {
+  return <BrandIcon icon={facebookIcon} {...props} />;
+}
+
+export function LinkedInIcon(props: IconProps) {
+  return <BrandIcon icon={linkedinIcon} {...props} />;
+}
+
+export function XIcon(props: IconProps) {
+  return <BrandIcon icon={xIcon} {...props} />;
+}
+
+export function PinterestIcon(props: IconProps) {
+  return <BrandIcon icon={pinterestIcon} {...props} />;
 }
