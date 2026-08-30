@@ -25,16 +25,16 @@ export default function ContactPage() {
               improve fastest.
             </p>
             <div className="mt-6 grid gap-5">
-              <p className="flex items-center gap-4 text-[#555]">
-                <PhoneIcon className="size-10 shrink-0" />
+              <p className="contact-icon-row flex items-center gap-4 text-[#555] transition hover:text-[#080808]">
+                <PhoneIcon className="contact-icon-pop size-10 shrink-0" />
                 <span>+44 0000 000000</span>
               </p>
-              <p className="flex items-center gap-4 text-[#555]">
-                <MailIcon className="size-10 shrink-0" />
+              <p className="contact-icon-row flex items-center gap-4 text-[#555] transition hover:text-[#080808]">
+                <MailIcon className="contact-icon-pop size-10 shrink-0" />
                 <span>hello@heron-marketing.com</span>
               </p>
-              <p className="flex items-center gap-4 text-[#555]">
-                <PinIcon className="size-10 shrink-0" />
+              <p className="contact-icon-row flex items-center gap-4 text-[#555] transition hover:text-[#080808]">
+                <PinIcon className="contact-icon-pop size-10 shrink-0" />
                 <span>United Kingdom</span>
               </p>
             </div>

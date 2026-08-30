@@ -183,6 +183,21 @@ a {
   }
 }
 
+@keyframes heron-contact-icon-pop {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  35% {
+    transform: translate3d(0, -4px, 0) rotate(-8deg) scale(1.08);
+  }
+
+  68% {
+    transform: translate3d(0, 1px, 0) rotate(5deg) scale(1.02);
+  }
+}
+
 .hero-hover-field {
   background-image:
     linear-gradient(115deg, transparent 0%, rgba(20, 92, 255, 0.2) 26%, transparent 48%),
@@ -214,10 +229,15 @@ a {
   animation-play-state: paused;
 }
 
+.contact-icon-row:hover .contact-icon-pop {
+  animation: heron-contact-icon-pop 650ms ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .service-icon-float,
   .logo-marquee-track,
-  .hero-hover-zone:hover .hero-hover-field {
+  .hero-hover-zone:hover .hero-hover-field,
+  .contact-icon-row:hover .contact-icon-pop {
     animation: none;
   }
 }

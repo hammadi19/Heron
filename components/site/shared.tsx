@@ -313,12 +313,12 @@ export function Footer() {
             <div className="border-black/8 py-9 lg:border-r lg:pr-10">
               <h3 className="text-lg font-black xl:text-xl">Contact Us</h3>
               <div className="mt-6 grid gap-4 text-base text-[#555]">
-                <p className="flex items-center gap-4">
-                  <PhoneIcon className="size-8 shrink-0" />
+                <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
+                  <PhoneIcon className="contact-icon-pop size-8 shrink-0" />
                   +44 0000 000000
                 </p>
-                <p className="flex items-center gap-4">
-                  <MailIcon className="size-8 shrink-0" />
+                <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
+                  <MailIcon className="contact-icon-pop size-8 shrink-0" />
                   hello@heron-marketing.com
                 </p>
               </div>
