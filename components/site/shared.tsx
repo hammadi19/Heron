@@ -112,7 +112,7 @@ export function PageHero({
   return (
     <section className="relative isolate overflow-hidden bg-[#fbfaf8] text-[#080808]">
       <div className="absolute inset-x-0 top-16 h-[20rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
-      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 pb-14 pt-32 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-36">
+      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-7 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-36">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
@@ -121,13 +121,13 @@ export function PageHero({
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-[#666]">{copy}</p>
         </div>
-        <div className="grid gap-3 border border-black/10 bg-white/70 p-4 backdrop-blur-xl md:grid-cols-3">
+        <div className="grid gap-3 border border-black/10 bg-white/70 p-4 backdrop-blur-xl sm:grid-cols-3">
           {[
             ["38%", "qualified demand lift"],
             ["4.8x", "faster test learning"],
             ["90d", "growth sprint plan"],
           ].map(([value, label]) => (
-            <div key={value} className="border-r border-black/10 p-3 text-[#080808] last:border-r-0">
+            <div key={value} className="border-b border-black/10 p-3 text-[#080808] last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
               <p className="font-serif text-3xl font-light">{value}</p>
               <p className="mt-2 text-xs font-bold leading-5 text-[#666]">{label}</p>
             </div>
@@ -166,11 +166,11 @@ export function SectionTitle({
 
 export function ServiceGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] border border-black/10 bg-white md:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl border border-black/10 bg-white md:grid-cols-2 lg:grid-cols-3">
       {services.map((service, index) => (
         <article
           key={service.title}
-          className="group border-b border-r border-black/10 p-6 transition hover:bg-[#fbfaf8] md:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+          className="group border-b border-black/10 p-5 transition hover:bg-[#fbfaf8] last:border-b-0 md:border-r md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
         >
           <service.icon
             className="service-icon-float size-12"
@@ -193,7 +193,7 @@ export function PortfolioGrid() {
     <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-2 lg:grid-cols-3">
       {portfolio.map(([title, label, image], index) => (
         <article key={`${title}-${label}`} className={`group overflow-hidden rounded-2xl bg-white shadow-[0_22px_70px_rgba(16,24,40,.08)] ${index === 1 ? "lg:translate-y-8" : ""}`}>
-          <div className="relative h-60 overflow-hidden">
+          <div className="relative h-56 overflow-hidden sm:h-60">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_34%,rgba(0,0,0,.78)_100%)]" />
             <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -212,7 +212,7 @@ export function NewsGrid() {
     <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-3">
       {news.map(([date, title, image]) => (
         <article key={title} className="group overflow-hidden rounded-2xl border border-black/10 bg-white">
-          <div className="relative h-52">
+          <div className="relative h-48 sm:h-52">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
           <div className="p-6">
@@ -242,13 +242,13 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact-us" className="border-t border-black/8 bg-white px-5 text-[#080808] sm:px-8">
-      <div className="mx-auto grid max-w-[92rem] border-x border-black/8 lg:grid-cols-[0.66fr_1.08fr]">
-        <div className="flex flex-col justify-between border-black/8 py-12 lg:border-r lg:px-10">
+    <footer id="contact-us" className="border-t border-black/8 bg-white px-4 text-[#080808] sm:px-8">
+      <div className="mx-auto grid max-w-[92rem] lg:grid-cols-[0.66fr_1.08fr] lg:border-x lg:border-black/8">
+        <div className="flex flex-col justify-between border-black/8 py-10 lg:border-r lg:px-10 lg:py-12">
           <div>
             <HeronLogo />
 
-            <div className="mt-16">
+            <div className="mt-10 sm:mt-16">
               <div>
                 <h3 className="text-lg font-black xl:text-xl">London Office</h3>
                 <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
@@ -259,9 +259,9 @@ export function Footer() {
               </div>
             </div>
 
-            <form className="mt-10 flex h-12 max-w-2xl items-center rounded-full border border-black/10 bg-white p-1 shadow-[0_18px_60px_rgba(16,24,40,.06)]">
+            <form className="mt-8 flex h-12 max-w-2xl items-center rounded-full border border-black/10 bg-white p-1 shadow-[0_18px_60px_rgba(16,24,40,.06)] sm:mt-10">
               <input
-                className="h-full min-w-0 flex-1 bg-transparent px-5 text-base outline-none placeholder:text-[#8a8a8a]"
+                className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm outline-none placeholder:text-[#8a8a8a] sm:px-5 sm:text-base"
                 placeholder="Type your Email address"
                 aria-label="Newsletter email"
               />
@@ -275,11 +275,11 @@ export function Footer() {
             </form>
           </div>
 
-          <div className="mt-12 flex flex-col gap-6 text-sm text-[#555] sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 flex flex-col gap-6 text-sm text-[#555] sm:mt-12 sm:flex-row sm:items-center sm:justify-between">
             <p>
               Copyright 2026 <span className="font-black text-[#080808]">Heron</span> | All Right Reserved.
             </p>
-            <div className="flex items-center gap-7 text-base font-black text-[#080808]">
+            <div className="flex flex-wrap items-center gap-3 text-base font-black text-[#080808] sm:gap-5">
               {socialLinks.map(({ label, Icon }) => (
                 <a
                   key={label}
@@ -294,7 +294,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col py-12 lg:px-14">
+        <div className="flex flex-col border-t border-black/8 py-10 lg:border-t-0 lg:px-14 lg:py-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl">
               Let&apos;s create the{" "}
@@ -309,17 +309,17 @@ export function Footer() {
             </Link>
           </div>
 
-          <div className="mt-14 grid flex-1 border-t border-black/8 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
+          <div className="mt-10 grid flex-1 border-t border-black/8 sm:mt-14 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
             <div className="border-black/8 py-9 lg:border-r lg:pr-10">
               <h3 className="text-lg font-black xl:text-xl">Contact Us</h3>
               <div className="mt-6 grid gap-4 text-base text-[#555]">
                 <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
-                  <PhoneIcon className="contact-icon-pop size-8 shrink-0" />
-                  +44 0000 000000
+                  <PhoneIcon className="contact-icon-pop size-7 shrink-0 sm:size-8" />
+                  <span className="break-all">+44 0000 000000</span>
                 </p>
                 <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
-                  <MailIcon className="contact-icon-pop size-8 shrink-0" />
-                  hello@heron-marketing.com
+                  <MailIcon className="contact-icon-pop size-7 shrink-0 sm:size-8" />
+                  <span className="break-all">hello@heron-marketing.com</span>
                 </p>
               </div>
             </div>

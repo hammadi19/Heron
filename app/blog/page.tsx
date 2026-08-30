@@ -13,18 +13,18 @@ export default function BlogPage() {
         copy="Practical articles on positioning, digital campaigns, landing pages, search demand, creative testing, and reporting."
       />
 
-      <section className="px-5 py-16 sm:px-8 lg:py-20">
+      <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <NewsGrid />
       </section>
 
-      <section className="border-y border-black/8 bg-white px-5 py-14 sm:px-8">
+      <section className="border-y border-black/8 bg-white px-4 py-12 sm:px-8 sm:py-14">
         <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
           {[
             ["Strategy Notes", "Frameworks for offer clarity and growth planning.", InsightIcon],
             ["Campaign Guides", "Practical ways to improve paid media, search, and creative testing.", CreativeIcon],
             ["Founder Reads", "Short, useful posts for decision makers.", ArticleIcon],
           ].map(([title, copy, Icon]) => (
-            <article key={title as string} className="border-black/10 md:border-r md:pr-10 md:last:border-r-0">
+            <article key={title as string} className="border-b border-black/10 pb-7 last:border-b-0 last:pb-0 md:border-b-0 md:border-r md:pb-0 md:pr-10 md:last:border-r-0">
               <Icon className="size-12" />
               <h3 className="mt-5 text-xl font-black">{title as string}</h3>
               <p className="mt-3 leading-6 text-[#666]">{copy as string}</p>

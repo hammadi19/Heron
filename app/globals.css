@@ -125,13 +125,16 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
     text-rendering: optimizeLegibility;
   }
 
   html {
     @apply font-sans;
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
+
 }
 
 ::selection {

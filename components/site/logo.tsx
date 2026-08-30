@@ -12,7 +12,7 @@ export function HeronLogo({
     return (
       <Link
         href="/"
-        className="grid size-14 place-items-center overflow-hidden rounded-full"
+        className="grid size-11 place-items-center overflow-hidden rounded-full sm:size-14"
         aria-label="Heron Marketing home"
       >
         <Image
@@ -20,7 +20,7 @@ export function HeronLogo({
           alt="Heron Marketing"
           width={180}
           height={180}
-          className="size-14 object-contain"
+          className="size-11 object-contain sm:size-14"
         />
       </Link>
     );
@@ -38,7 +38,7 @@ export function HeronLogo({
         width={560}
         height={190}
         priority
-        className="site-logo-lockup h-14 w-auto object-contain transition-all duration-300"
+        className="site-logo-lockup h-10 w-auto object-contain transition-all duration-300 sm:h-14"
       />
     </Link>
   );

@@ -13,11 +13,11 @@ export default function ServicesPage() {
         copy="Choose one focused sprint or combine strategy, creative, media, search, lifecycle, and analytics into one connected demand system."
       />
 
-      <section className="px-5 py-16 sm:px-8 lg:py-20">
+      <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <ServiceGrid />
       </section>
 
-      <section className="border-y border-black/8 bg-white px-5 py-16 sm:px-8 lg:py-20">
+      <section className="border-y border-black/8 bg-white px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <Eyebrow>Sprint Menu</Eyebrow>
@@ -42,7 +42,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="px-5 py-16 text-center sm:px-8">
+      <section className="px-4 py-14 text-center sm:px-8 sm:py-16">
         <h2 className="mx-auto max-w-3xl text-4xl font-light leading-[1.05] tracking-normal">
           Need the right service mix?
         </h2>
@@ -50,7 +50,7 @@ export default function ServicesPage() {
           Start with a short brief and Heron will recommend the fastest route to
           useful growth signals.
         </p>
-        <Button asChild className="mt-6 h-14 rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff]">
+        <Button asChild className="mt-6 h-12 w-full rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff] sm:h-14 sm:w-auto">
           <Link href="/contact-us">
             Start a brief
             <ArrowRight className="size-4" />
