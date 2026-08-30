@@ -63,9 +63,9 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-black/8 bg-white px-4 py-12 sm:px-8 sm:py-14">
-        <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
+        <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
           {principles.map(([title, copy, Icon]) => (
-            <article key={title as string} className="border-b border-black/10 pb-7 last:border-b-0 last:pb-0 md:border-b-0 md:border-r md:pb-0 md:pr-10 md:last:border-r-0">
+            <article key={title as string} className="min-w-[78vw] snap-start rounded-2xl border border-black/10 bg-[#fbfaf8] p-5 md:min-w-0 md:rounded-none md:border-0 md:border-r md:bg-transparent md:p-0 md:pr-10 md:last:border-r-0">
               <Icon className="size-12" />
               <h3 className="mt-5 text-xl font-black">{title as string}</h3>
               <p className="mt-3 leading-6 text-[#666]">{copy as string}</p>

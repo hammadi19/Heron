@@ -198,9 +198,9 @@ export default function Home() {
         <div className="absolute right-0 top-8 h-56 w-56 bg-[radial-gradient(circle,rgba(170,124,255,.14),transparent_68%)] sm:h-96 sm:w-96 sm:bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <Eyebrow>What We Do</Eyebrow>
-          <div className="mt-6 grid border-black/10 lg:grid-cols-5">
+          <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
             {services.map((service, index) => (
-              <article key={service.title} className="border-b border-black/12 py-6 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0">
+              <article key={service.title} className="min-w-[78vw] snap-start rounded-2xl border border-black/10 bg-white/74 p-5 shadow-[0_18px_50px_rgba(16,24,40,.05)] lg:min-w-0 lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
                 <service.icon
                   className="service-icon-float size-12"
                   style={{ animationDelay: `${index * 0.32}s` }}
@@ -231,9 +231,9 @@ export default function Home() {
               help ambitious brands scale with confidence.
             </p>
 
-            <div className="mt-6 grid gap-6">
+            <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:grid sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0">
               {aboutHighlights.map(([title, copy, Icon]) => (
-                <div key={title as string} className="grid gap-5 sm:grid-cols-[4rem_1fr]">
+                <div key={title as string} className="min-w-[82vw] snap-start rounded-2xl border border-black/10 bg-white p-5 sm:min-w-0 sm:grid sm:grid-cols-[4rem_1fr] sm:border-0 sm:bg-transparent sm:p-0">
                   <Icon className="size-14" />
                   <div>
                     <h3 className="text-xl font-black">{title as string}</h3>
@@ -281,9 +281,9 @@ export default function Home() {
           </div>
           <div>
             <Eyebrow>Our Process</Eyebrow>
-            <div className="mt-6 grid gap-9 md:grid-cols-4">
+            <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 md:mx-0 md:grid md:grid-cols-4 md:gap-9 md:overflow-visible md:px-0 md:pb-0">
               {process.map(([number, title, copy], index) => (
-                <article key={number}>
+                <article key={number} className="min-w-[76vw] snap-start rounded-2xl border border-black/10 bg-white p-5 md:min-w-0 md:rounded-none md:border-0 md:bg-transparent md:p-0">
                   <p className={`text-4xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
                     {number}
                   </p>
@@ -316,9 +316,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-6 grid gap-5 lg:grid-cols-3">
+          <div className="no-scrollbar -mx-4 mt-6 flex snap-x gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
             {work.map(([title, label, image]) => (
-              <article key={title} className="group relative h-56 overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60">
+              <article key={title} className="group relative h-56 min-w-[84vw] snap-start overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60 lg:min-w-0">
                 <Image
                   src={image}
                   alt={title}
@@ -343,13 +343,13 @@ export default function Home() {
       </section>
 
       <section className="border-y border-black/8 bg-white px-4 py-12 sm:px-8 sm:py-14">
-        <div className="mx-auto grid max-w-[92rem] gap-8 md:grid-cols-3">
+        <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
           {[
             ["38%", "Average increase in qualified leads within 90 days"],
             ["4.8x", "Average return on ad spend across campaigns"],
             ["90 days", "Typical time to meaningful performance lift"],
           ].map(([value, label]) => (
-            <div key={value} className="border-b border-black/12 pb-8 text-center last:border-b-0 last:pb-0 md:border-b-0 md:border-r md:pb-0 md:last:border-r-0">
+            <div key={value} className="min-w-[74vw] snap-start rounded-2xl border border-black/10 bg-[#fbfaf8] p-6 text-center md:min-w-0 md:rounded-none md:border-0 md:border-r md:bg-transparent md:p-0 md:last:border-r-0">
               <p className="font-serif text-5xl font-light">{value}</p>
               <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-[#555]">{label}</p>
             </div>

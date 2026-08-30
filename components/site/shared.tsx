@@ -166,11 +166,11 @@ export function SectionTitle({
 
 export function ServiceGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl border border-black/10 bg-white md:grid-cols-2 lg:grid-cols-3">
+    <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto rounded-2xl border border-black/10 bg-white pb-3 md:grid md:grid-cols-2 md:gap-0 md:overflow-hidden md:pb-0 lg:grid-cols-3">
       {services.map((service, index) => (
         <article
           key={service.title}
-          className="group border-b border-black/10 p-5 transition hover:bg-[#fbfaf8] last:border-b-0 md:border-r md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+          className="group min-w-[82vw] snap-start border-r border-black/10 p-5 transition last:border-r-0 hover:bg-[#fbfaf8] md:min-w-0 md:border-b md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
         >
           <service.icon
             className="service-icon-float size-12"
@@ -190,9 +190,9 @@ export function ServiceGrid() {
 
 export function PortfolioGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:grid-cols-3">
       {portfolio.map(([title, label, image], index) => (
-        <article key={`${title}-${label}`} className={`group overflow-hidden rounded-2xl bg-white shadow-[0_22px_70px_rgba(16,24,40,.08)] ${index === 1 ? "lg:translate-y-8" : ""}`}>
+        <article key={`${title}-${label}`} className={`group min-w-[82vw] snap-start overflow-hidden rounded-2xl bg-white shadow-[0_22px_70px_rgba(16,24,40,.08)] md:min-w-0 ${index === 1 ? "lg:translate-y-8" : ""}`}>
           <div className="relative h-56 overflow-hidden sm:h-60">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_34%,rgba(0,0,0,.78)_100%)]" />
@@ -209,9 +209,9 @@ export function PortfolioGrid() {
 
 export function NewsGrid() {
   return (
-    <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-3">
+    <div className="no-scrollbar mx-auto flex max-w-[92rem] snap-x gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:pb-0">
       {news.map(([date, title, image]) => (
-        <article key={title} className="group overflow-hidden rounded-2xl border border-black/10 bg-white">
+        <article key={title} className="group min-w-[82vw] snap-start overflow-hidden rounded-2xl border border-black/10 bg-white md:min-w-0">
           <div className="relative h-48 sm:h-52">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
