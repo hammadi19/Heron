@@ -106,7 +106,7 @@ export default function Home() {
             <div className="relative">
               <div className="relative h-[25rem] overflow-hidden rounded-[2rem] bg-[#e8edf2] shadow-[0_26px_90px_rgba(16,24,40,.14)]">
                 <Image
-                  src="/heron-hero-office.png"
+                  src="/heron-hero-bright.png"
                   alt="Heron Marketing strategists reviewing a growth plan"
                   fill
                   priority
