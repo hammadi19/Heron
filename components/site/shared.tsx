@@ -6,7 +6,6 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 
-import { Header } from "@/components/site/header";
 import { HeronLogo } from "@/components/site/logo";
 import {
   AnalyticsIcon,
@@ -19,8 +18,6 @@ import {
   SendIcon,
   StrategyIcon,
 } from "@/components/site/service-icons";
-
-export { Header };
 
 export const services = [
   {
@@ -104,7 +101,6 @@ export function PageHero({
   return (
     <section className="relative isolate overflow-hidden bg-[#fbfaf8] text-[#080808]">
       <div className="absolute inset-x-0 top-16 h-[20rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
-      <Header />
       <div className="relative z-10 mx-auto grid max-w-[92rem] gap-8 px-5 pb-14 pt-32 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-36">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>

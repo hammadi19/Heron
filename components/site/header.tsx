@@ -21,7 +21,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b px-5 transition-all duration-300 sm:px-8 ${
+      className={`fixed inset-x-0 top-0 z-[100] border-b px-5 transition-all duration-300 sm:px-8 ${
         scrolled ? "py-2 shadow-[0_18px_50px_rgba(16,24,40,.08)]" : "py-5"
       } ${
         inverted && !scrolled
