@@ -278,7 +278,7 @@ export function Footer() {
           <div>
             <HeronLogo />
 
-            <div className="mt-16 grid gap-8 sm:grid-cols-2">
+            <div className="mt-16">
               <div>
                 <h3 className="text-lg font-black xl:text-xl">London Office</h3>
                 <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
@@ -287,28 +287,20 @@ export function Footer() {
                   London SW3 5EP, UK
                 </p>
               </div>
-              <div>
-                <h3 className="text-lg font-black xl:text-xl">Manchester Office</h3>
-                <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
-                  31 Spinningfields Avenue,
-                  <br />
-                  Manchester M3 3EB, UK
-                </p>
-              </div>
             </div>
 
-            <form className="mt-10 flex max-w-2xl items-center rounded-full border border-black/10 bg-white p-2 shadow-[0_18px_60px_rgba(16,24,40,.06)]">
+            <form className="mt-10 flex h-12 max-w-2xl items-center rounded-full border border-black/10 bg-white p-1 shadow-[0_18px_60px_rgba(16,24,40,.06)]">
               <input
-                className="min-w-0 flex-1 bg-transparent px-5 text-base outline-none placeholder:text-[#8a8a8a]"
+                className="h-full min-w-0 flex-1 bg-transparent px-5 text-base outline-none placeholder:text-[#8a8a8a]"
                 placeholder="Type your Email address"
                 aria-label="Newsletter email"
               />
               <button
-                className="grid size-14 shrink-0 place-items-center rounded-full bg-[#080808] text-white transition hover:bg-[#145cff]"
+                className="grid size-10 shrink-0 place-items-center rounded-full bg-[#080808] text-white transition hover:bg-[#145cff]"
                 type="button"
                 aria-label="Subscribe to newsletter"
               >
-                <SendIcon className="size-9" />
+                <SendIcon className="size-7" />
               </button>
             </form>
           </div>
