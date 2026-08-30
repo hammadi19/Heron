@@ -25,7 +25,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
         scrolled ? "py-2 shadow-[0_18px_50px_rgba(16,24,40,.08)]" : "py-5"
       } ${
         !scrolled
-          ? "border-black/0 bg-transparent"
+          ? "border-transparent bg-transparent"
           : "border-black/8 bg-white/92 backdrop-blur-xl"
       }`}
     >

@@ -132,8 +132,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbfaf8] text-[#080808]">
       <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#fbfaf8]">
-        <div className="absolute inset-x-0 top-20 h-[calc(100%-5rem)] bg-[radial-gradient(circle_at_48%_28%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_45%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_62%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_54%,rgba(170,124,255,.18),transparent_28%)]" />
-        <div className="hero-hover-field pointer-events-none absolute inset-0 top-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_42%,rgba(170,124,255,.18),transparent_28%)]" />
+        <div className="hero-hover-field pointer-events-none absolute inset-0" />
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-10 px-5 pb-14 pt-32 sm:px-8 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:pb-20 lg:pt-36">
           <div>
             <h1 className="max-w-[54rem] text-[3.1rem] font-light leading-[0.96] tracking-normal sm:text-[4.6rem] lg:text-[5.45rem]">
