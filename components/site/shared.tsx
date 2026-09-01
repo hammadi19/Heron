@@ -110,9 +110,10 @@ export function PageHero({
   copy: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-[#fbfaf8] text-[#080808]">
-      <div className="absolute inset-x-0 top-16 h-[20rem] bg-[radial-gradient(circle_at_45%_28%,rgba(20,92,255,.18),transparent_30%),radial-gradient(circle_at_65%_42%,rgba(124,232,217,.18),transparent_26%),radial-gradient(circle_at_54%_66%,rgba(255,112,88,.12),transparent_28%)]" />
-      <div className="relative z-10 mx-auto grid max-w-[92rem] gap-7 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-36">
+    <section className="relative isolate flex min-h-[58vh] overflow-hidden bg-[#fbfaf8] text-[#080808] sm:min-h-[62vh]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.18),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.18),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.12),transparent_29%),radial-gradient(circle_at_28%_36%,rgba(170,124,255,.13),transparent_27%)] sm:bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.22),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.15),transparent_29%),radial-gradient(circle_at_28%_36%,rgba(170,124,255,.16),transparent_27%)]" />
+      <div className="hero-hover-field pointer-events-none absolute inset-0 opacity-70" />
+      <div className="relative z-10 mx-auto grid w-full max-w-[92rem] self-end gap-7 px-4 pb-12 pt-32 sm:px-8 sm:pb-14 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-40">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
