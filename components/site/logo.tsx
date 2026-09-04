@@ -35,8 +35,8 @@ export function HeronLogo({
       <Image
         src={inverted ? "/heron-logo-lockup-white.png" : "/heron-logo-lockup-transparent.png"}
         alt="Heron Marketing"
-        width={560}
-        height={190}
+        width={1120}
+        height={380}
         priority
         className="site-logo-lockup h-10 w-auto object-contain transition-all duration-300 sm:h-14"
       />
