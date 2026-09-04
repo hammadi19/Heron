@@ -38,10 +38,10 @@ export default function AboutPage() {
       />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.86fr_1.14fr] md:items-center">
           <div>
             <Eyebrow>How We Support</Eyebrow>
-            <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl">
+            <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl md:text-4xl xl:text-5xl">
               We make marketing easier to choose, launch, measure, and improve.
             </h2>
             <p className="mt-5 text-base leading-7 text-white/64">
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </Link>
             </Button>
           </div>
-          <div className="relative min-h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.32)] ring-1 ring-white/10 sm:min-h-[26rem] sm:rounded-[2rem]">
+          <div className="relative min-h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.32)] ring-1 ring-white/10 sm:min-h-[26rem] md:min-h-[23rem] sm:rounded-[2rem] xl:min-h-[26rem]">
             <Image src="/heron-hero-office.png" alt="Heron strategy team" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-[92rem]">
           <Eyebrow>Who We Are</Eyebrow>
-          <div className="mt-6 grid gap-5 lg:grid-cols-3">
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
             {team.map((member) => (
               <article key={member.name} className="rounded-2xl border border-white/10 bg-white/6 p-6">
                 <h2 className="text-2xl font-black">{member.name}</h2>

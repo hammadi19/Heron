@@ -88,7 +88,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <PageHero eyebrow={service.eyebrow} title={service.title} copy={service.intro} />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.72fr_1.28fr]">
           <div className="rounded-2xl border border-white/10 bg-white/6 p-6">
             <h2 className="text-2xl font-black">What we cover</h2>
             <div className="mt-5 grid gap-3">

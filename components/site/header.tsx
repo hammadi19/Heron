@@ -30,14 +30,14 @@ export function Header({ inverted = true }: { inverted?: boolean }) {
       }`}
     >
       <div
-        className={`mx-auto flex max-w-[92rem] items-center justify-between gap-3 transition-all duration-300 sm:gap-6 ${
-          scrolled ? "[&_.site-logo-lockup]:h-8 sm:[&_.site-logo-lockup]:h-10" : "[&_.site-logo-lockup]:h-10 sm:[&_.site-logo-lockup]:h-14"
+        className={`mx-auto flex max-w-[92rem] items-center justify-between gap-3 transition-all duration-300 sm:gap-5 lg:gap-6 ${
+          scrolled ? "[&_.site-logo-lockup]:h-8 sm:[&_.site-logo-lockup]:h-10" : "[&_.site-logo-lockup]:h-10 sm:[&_.site-logo-lockup]:h-12 xl:[&_.site-logo-lockup]:h-14"
         }`}
       >
         <HeronLogo inverted={inverted || scrolled} />
         <nav
-          className={`hidden items-center text-[0.9rem] font-black transition-all duration-300 lg:flex ${
-            scrolled ? "gap-6" : "gap-8"
+          className={`hidden items-center text-[0.72rem] font-black transition-all duration-300 md:flex lg:text-[0.78rem] xl:text-[0.9rem] ${
+            scrolled ? "gap-3 lg:gap-4 xl:gap-6" : "gap-3 lg:gap-5 xl:gap-8"
           } ${inverted && !scrolled ? "text-white/82" : "text-white/82"}`}
         >
           {navLinks.map(([label, href]) => (
@@ -48,7 +48,7 @@ export function Header({ inverted = true }: { inverted?: boolean }) {
         </nav>
         <Link
           href="/contact-us"
-          className={`group inline-flex items-center gap-3 rounded-full text-sm font-black shadow-[0_18px_45px_rgba(8,8,8,.16)] transition duration-300 hover:-translate-y-0.5 ${
+          className={`group inline-flex items-center gap-3 rounded-full text-sm font-black shadow-[0_18px_45px_rgba(8,8,8,.16)] transition duration-300 hover:-translate-y-0.5 md:hidden xl:inline-flex ${
             scrolled ? "h-10 px-3 text-xs sm:h-11 sm:px-6 sm:text-sm" : "h-10 px-3 text-xs sm:h-14 sm:px-7 sm:text-sm"
           } ${
             inverted && !scrolled

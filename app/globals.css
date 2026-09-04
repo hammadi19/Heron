@@ -236,6 +236,7 @@ a {
 
 .logo-marquee-track {
   animation: heron-logo-marquee 24s linear infinite;
+  contain: paint;
 }
 
 .logo-marquee-track:hover {

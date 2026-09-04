@@ -18,7 +18,7 @@ export default function ServicesPage() {
       </section>
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.72fr_1.28fr]">
           <div>
             <Eyebrow>Sprint Menu</Eyebrow>
             <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal">

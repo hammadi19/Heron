@@ -70,7 +70,7 @@ export default function PackagesPage() {
             digital strategy, our tailored packages give you the right
             expertise, tools, and level of support.
           </p>
-          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
             {businessPackages.map((pack) => (
               <article key={pack.title} className="rounded-2xl border border-white/10 bg-white/6 p-6">
                 <p className="text-sm font-black text-[#7ce8d9]">{pack.title}</p>
@@ -92,7 +92,7 @@ export default function PackagesPage() {
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-[92rem]">
-          <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
+          <div className="grid gap-8 md:grid-cols-[0.72fr_1.28fr]">
             <div>
               <Eyebrow>SEO Packages</Eyebrow>
               <h2 className="mt-5 text-4xl font-light leading-tight">Local, Premium, and Full SEO support.</h2>
@@ -102,7 +102,7 @@ export default function PackagesPage() {
                 quick win.
               </p>
             </div>
-            <div className="grid gap-5 lg:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-3">
               {seoPackages.map((pack) => (
                 <article key={pack.name} className="rounded-2xl border border-white/10 bg-white/6 p-5">
                   <h3 className="text-xl font-black">{pack.name}</h3>

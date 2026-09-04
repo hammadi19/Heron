@@ -158,13 +158,13 @@ export default function Home() {
       <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(139,92,246,.36),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.15),transparent_30%),linear-gradient(180deg,#050505_0%,#0b0d14_58%,#050505_100%)]" />
         <div className="hero-hover-field pointer-events-none absolute inset-0" />
-        <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
+        <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 md:grid-cols-[1.02fr_0.98fr] md:items-center md:gap-8 md:pb-14 lg:grid-cols-[1.18fr_0.82fr] lg:gap-10 lg:pb-20 lg:pt-36">
           <div className="min-w-0">
             <div className="mb-8 inline-flex items-center gap-4 border-2 border-[#8b5cf6] px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.42em] text-white sm:text-xs">
               <span className="h-0.5 w-12 bg-[#8b5cf6]" />
               Heron Marketing
             </div>
-            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[3.45rem]">
+            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[3.8rem] md:text-[3.3rem] lg:text-[3.45rem] xl:text-[4.4rem]">
               <span className="block whitespace-nowrap font-serif italic">Marketing that make</span>
               <span className="block">your business</span>
               <span className="block">impossible to ignore.</span>
@@ -191,8 +191,8 @@ export default function Home() {
           </div>
 
           <div className="min-w-0">
-            <div className="relative min-h-[22rem] sm:min-h-[30rem]">
-              <div className="absolute right-0 top-0 h-[16.5rem] w-[82%] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[18rem] sm:h-[24rem] sm:rounded-[2rem]">
+            <div className="relative min-h-[22rem] sm:min-h-[30rem] md:min-h-[26rem] lg:min-h-[30rem]">
+              <div className="absolute right-0 top-0 h-[16.5rem] w-[82%] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[18rem] sm:h-[24rem] md:h-[20rem] sm:rounded-[2rem] lg:h-[24rem]">
                 <Image
                   src="/heron-web-ui-showcase.png"
                   alt="Responsive web design interface with Heron-inspired digital layouts"
@@ -202,7 +202,7 @@ export default function Home() {
                   className="object-cover object-[58%_45%]"
                 />
               </div>
-              <div className="absolute bottom-0 left-0 h-[13rem] w-[58%] overflow-hidden rounded-[1.25rem] bg-[#111318] shadow-[0_24px_80px_rgba(0,0,0,.45)] ring-1 ring-white/10 sm:h-[18rem] sm:rounded-[1.6rem]">
+              <div className="absolute bottom-0 left-0 h-[13rem] w-[58%] overflow-hidden rounded-[1.25rem] bg-[#111318] shadow-[0_24px_80px_rgba(0,0,0,.45)] ring-1 ring-white/10 sm:h-[18rem] md:h-[15rem] sm:rounded-[1.6rem] lg:h-[18rem]">
                 <Image
                   src="/heron-future-webdesign.jpg"
                   alt="Futuristic web design dashboard and interface system"
@@ -242,9 +242,9 @@ export default function Home() {
         <div className="absolute right-0 top-8 h-56 w-56 bg-[radial-gradient(circle,rgba(170,124,255,.14),transparent_68%)] sm:h-96 sm:w-96 sm:bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <Eyebrow>What We Do</Eyebrow>
-          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-6 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 md:mx-0 md:grid md:grid-cols-3 md:gap-0 md:overflow-visible md:px-0 md:pb-0 xl:grid-cols-6">
             {services.map((service, index) => (
-              <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 shadow-[0_18px_50px_rgba(0,0,0,.18)] lg:w-auto lg:flex-auto lg:rounded-none lg:border-0 lg:border-r lg:border-white/10 lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
+              <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 shadow-[0_18px_50px_rgba(0,0,0,.18)] md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:border-b md:border-white/10 md:bg-transparent md:p-6 md:shadow-none md:[&:nth-child(3n)]:border-r-0 md:[&:nth-last-child(-n+3)]:border-b-0 xl:p-0 xl:px-8 xl:first:pl-0 xl:last:border-r-0">
                 <service.icon
                   className="service-icon-float size-12"
                   style={{ animationDelay: `${index * 0.32}s` }}
@@ -261,10 +261,10 @@ export default function Home() {
       </section>
 
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[1fr_0.9fr] md:items-start lg:grid-cols-[1fr_1fr]">
           <div className="min-w-0">
             <Eyebrow>About Us</Eyebrow>
-            <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
+            <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl md:text-4xl xl:text-5xl">
               <span className="font-serif italic">Creating digital solutions that deliver</span>
               <br />
               results and delight customers
@@ -289,7 +289,7 @@ export default function Home() {
           </div>
 
           <div className="min-w-0">
-            <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[26rem] sm:rounded-[2rem]">
+            <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[26rem] md:h-[21rem] sm:rounded-[2rem] xl:h-[26rem]">
               <Image
                 src="/heron-web-design-desk.jpg"
                 alt="Heron strategist designing digital growth systems"
@@ -298,13 +298,13 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="mt-6 grid gap-5 sm:grid-cols-[7rem_1fr] sm:items-center sm:gap-6">
-              <AwardIcon className="size-20" />
+            <div className="mt-6 grid gap-5 sm:grid-cols-[7rem_1fr] sm:items-center sm:gap-6 md:grid-cols-1 xl:grid-cols-[7rem_1fr]">
+              <AwardIcon className="size-20 md:size-14 xl:size-20" />
               <div>
                 <div className="grid gap-4">
                   {founders.map(([name, role, quote]) => (
                     <blockquote key={name} className="border-l border-[#7ce8d9]/60 pl-4">
-                      <p className="font-serif text-xl italic leading-tight text-white/72">“{quote}”</p>
+                      <p className="font-serif text-lg italic leading-tight text-white/72 xl:text-xl">“{quote}”</p>
                       <p className="mt-3 text-base font-black">{name}</p>
                       <p className="text-sm text-white/50">{role}</p>
                     </blockquote>
@@ -317,8 +317,8 @@ export default function Home() {
       </section>
 
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.05fr] lg:items-center">
-          <div className="relative h-[18rem] overflow-hidden rounded-[1.2rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[23rem]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.72fr_1.05fr] md:items-center">
+          <div className="relative h-[18rem] overflow-hidden rounded-[1.2rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[23rem] md:h-[19rem] lg:h-[23rem]">
             <Image
               src="/heron-future-webdesign.jpg"
               alt="Heron team collaborating on a digital growth campaign"
@@ -391,9 +391,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
             {work.map(([title, label, image]) => (
-              <article key={title} className="group relative h-56 w-[84vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60 lg:w-auto lg:flex-auto">
+              <article key={title} className="group relative h-56 w-[84vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#101828] text-white sm:h-60 md:w-auto md:flex-auto">
                 <Image
                   src={image}
                   alt={title}

@@ -14,7 +14,7 @@ export default function ContactPage() {
       />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.72fr_1.28fr]">
           <div>
             <h2 className="text-4xl font-light leading-[1.05] tracking-normal">
               Let&apos;s build something great together.
@@ -40,7 +40,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1fr_0.62fr]">
+          <div className="grid gap-6 xl:grid-cols-[1fr_0.62fr]">
             <form className="grid gap-4 border border-white/10 bg-white/6 p-4 shadow-[0_26px_90px_rgba(0,0,0,.28)] sm:p-6">
               <div className="grid gap-4 md:grid-cols-2">
                 <input className="h-12 border border-white/10 bg-[#0d0f15] px-4 text-sm text-white outline-none placeholder:text-white/38 focus:border-[#7ce8d9]" placeholder="First Name" aria-label="First Name" />

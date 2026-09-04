@@ -114,10 +114,10 @@ export function PageHero({
     <section className="relative isolate flex min-h-[58vh] overflow-hidden bg-[#050505] text-white sm:min-h-[62vh]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(139,92,246,.34),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.16),transparent_29%),linear-gradient(180deg,#050505_0%,#0b0d14_62%,#050505_100%)]" />
       <div className="hero-hover-field pointer-events-none absolute inset-0 opacity-70" />
-      <div className="relative z-10 mx-auto grid w-full max-w-[92rem] self-end gap-7 px-4 pb-12 pt-32 sm:px-8 sm:pb-14 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-40">
+      <div className="relative z-10 mx-auto grid w-full max-w-[92rem] self-end gap-7 px-4 pb-12 pt-32 sm:px-8 sm:pb-14 sm:pt-36 md:grid-cols-[1fr_0.82fr] md:items-end lg:grid-cols-[1.05fr_0.95fr] lg:pb-20 lg:pt-40">
         <div>
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl md:text-4xl xl:text-5xl">
             <span className="font-serif italic">{title.split(" ").slice(0, 2).join(" ")}</span>{" "}
             {title.split(" ").slice(2).join(" ")}
           </h1>
@@ -168,11 +168,11 @@ export function SectionTitle({
 
 export function ServiceGrid() {
   return (
-    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto rounded-2xl border border-white/10 bg-white/6 pb-3 md:grid md:grid-cols-2 md:gap-0 md:overflow-hidden md:pb-0 lg:grid-cols-3">
+    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto rounded-2xl border border-white/10 bg-white/6 pb-3 md:grid md:grid-cols-2 md:gap-0 md:overflow-hidden md:pb-0 xl:grid-cols-3">
       {services.map((service, index) => (
         <article
           key={service.title}
-          className="group w-[82vw] flex-none snap-start border-r border-white/10 p-5 text-white transition last:border-r-0 hover:bg-white/8 md:w-auto md:flex-auto md:border-b md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+          className="group w-[82vw] flex-none snap-start border-r border-white/10 p-5 text-white transition last:border-r-0 hover:bg-white/8 md:w-auto md:flex-auto md:border-b md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 xl:[&:nth-child(2n)]:border-r xl:[&:nth-child(3n)]:border-r-0 xl:[&:nth-last-child(-n+3)]:border-b-0"
         >
           <service.icon
             className="service-icon-float size-12"
@@ -192,9 +192,9 @@ export function ServiceGrid() {
 
 export function PortfolioGrid() {
   return (
-    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:grid-cols-3">
+    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 xl:grid-cols-3">
       {portfolio.map(([title, label, image], index) => (
-        <article key={`${title}-${label}`} className={`group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#111318] shadow-[0_22px_70px_rgba(0,0,0,.34)] md:w-auto md:flex-auto ${index === 1 ? "lg:translate-y-8" : ""}`}>
+        <article key={`${title}-${label}`} className={`group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#111318] shadow-[0_22px_70px_rgba(0,0,0,.34)] md:w-auto md:flex-auto ${index === 1 ? "xl:translate-y-8" : ""}`}>
           <div className="relative h-56 overflow-hidden sm:h-60">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_34%,rgba(0,0,0,.78)_100%)]" />
@@ -246,12 +246,12 @@ export function Footer() {
 
   return (
     <footer id="contact-us" className="border-t border-white/10 bg-[#050505] px-4 text-white sm:px-8">
-      <div className="mx-auto grid max-w-[92rem] lg:grid-cols-[0.66fr_1.08fr] lg:border-x lg:border-white/10">
-        <div className="flex flex-col justify-between border-white/10 py-10 lg:border-r lg:px-10 lg:py-12">
+      <div className="mx-auto grid max-w-[92rem] overflow-hidden md:grid-cols-[0.72fr_1fr] md:border-x md:border-white/10 xl:grid-cols-[0.66fr_1.08fr]">
+        <div className="min-w-0 flex flex-col justify-between border-white/10 py-10 md:border-r md:px-7 md:py-10 lg:px-10 lg:py-12">
           <div>
             <HeronLogo inverted />
 
-            <div className="mt-10 sm:mt-16">
+            <div className="mt-10 sm:mt-16 md:mt-10 xl:mt-16">
               <div>
                 <h3 className="text-lg font-black xl:text-xl">London Office</h3>
                 <p className="mt-4 max-w-xs text-base leading-7 text-white/58">
@@ -278,7 +278,7 @@ export function Footer() {
             </form>
           </div>
 
-          <div className="mt-10 flex flex-col gap-6 text-sm text-white/56 sm:mt-12 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 flex flex-col gap-6 text-sm text-white/56 sm:mt-12 md:mt-10 xl:mt-12">
             <p>
               Copyright 2026 <span className="font-black text-white">Heron</span> | All Right Reserved.
             </p>
@@ -297,9 +297,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col border-t border-white/10 py-10 lg:border-t-0 lg:px-14 lg:py-12">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
-            <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl">
+        <div className="min-w-0 flex flex-col border-t border-white/10 py-10 md:border-t-0 md:px-8 md:py-10 lg:px-14 lg:py-12">
+          <div className="grid gap-8 xl:grid-cols-[1fr_auto] xl:items-start">
+            <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl md:text-4xl xl:text-5xl">
               Let&apos;s take your{" "}
               <span className="font-serif italic">digital presence to the next level.</span>
             </h2>
@@ -312,8 +312,8 @@ export function Footer() {
             </Link>
           </div>
 
-          <div className="mt-10 grid flex-1 border-t border-white/10 sm:mt-14 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
-            <div className="border-white/10 py-9 lg:border-r lg:pr-10">
+          <div className="mt-10 grid flex-1 border-t border-white/10 sm:mt-14 md:grid-cols-2 md:gap-x-8 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
+            <div className="border-white/10 py-9 md:col-span-2 lg:col-span-1 lg:border-r lg:pr-10">
               <h3 className="text-lg font-black xl:text-xl">Contact Us</h3>
               <div className="mt-6 grid gap-4 text-base text-white/58">
                 <p className="contact-icon-row flex items-center gap-4 transition hover:text-white">

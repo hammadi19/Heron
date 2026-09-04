@@ -25,10 +25,10 @@ export default function CustomisedSolutionsPage() {
       />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+        <div className="mx-auto grid max-w-[92rem] gap-10 md:grid-cols-[0.82fr_1.18fr]">
           <div>
             <Eyebrow>Built Around You</Eyebrow>
-            <h2 className="mt-5 text-4xl font-light leading-tight sm:text-5xl">
+            <h2 className="mt-5 text-4xl font-light leading-tight sm:text-5xl md:text-4xl xl:text-5xl">
               Bespoke systems for businesses that need something smarter.
             </h2>
             <p className="mt-5 text-base leading-8 text-white/64">
@@ -54,7 +54,7 @@ export default function CustomisedSolutionsPage() {
       </section>
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-14 sm:px-8 sm:py-16">
-        <div className="mx-auto grid max-w-[92rem] gap-8 rounded-2xl border border-[#8b5cf6]/30 bg-[#8b5cf6]/12 p-6 lg:grid-cols-[0.8fr_1.2fr] lg:p-8">
+        <div className="mx-auto grid max-w-[92rem] gap-8 rounded-2xl border border-[#8b5cf6]/30 bg-[#8b5cf6]/12 p-6 md:grid-cols-[0.8fr_1.2fr] lg:p-8">
           <div>
             <Eyebrow>AI Tools</Eyebrow>
             <h2 className="mt-5 text-3xl font-light leading-tight sm:text-4xl">
