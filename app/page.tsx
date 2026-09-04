@@ -164,7 +164,7 @@ export default function Home() {
               <span className="h-0.5 w-12 bg-[#8b5cf6]" />
               Heron Marketing
             </div>
-            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
+            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[3.45rem]">
               <span className="block whitespace-nowrap font-serif italic">Marketing that make</span>
               <span className="block">your business</span>
               <span className="block">impossible to ignore.</span>
