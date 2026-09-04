@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { HeronLogo } from "@/components/site/logo";
 import { navLinks } from "@/components/site/navigation";
 
-export function Header({ inverted = false }: { inverted?: boolean }) {
+export function Header({ inverted = true }: { inverted?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
       } ${
         !scrolled
           ? "border-transparent bg-transparent"
-          : "border-black/8 bg-white/92 backdrop-blur-xl"
+          : "border-white/10 bg-[#050505]/88 backdrop-blur-xl"
       }`}
     >
       <div
@@ -34,11 +34,11 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
           scrolled ? "[&_.site-logo-lockup]:h-8 sm:[&_.site-logo-lockup]:h-10" : "[&_.site-logo-lockup]:h-10 sm:[&_.site-logo-lockup]:h-14"
         }`}
       >
-        <HeronLogo inverted={inverted && !scrolled} />
+        <HeronLogo inverted={inverted || scrolled} />
         <nav
           className={`hidden items-center text-[0.9rem] font-black transition-all duration-300 lg:flex ${
             scrolled ? "gap-6" : "gap-8"
-          } ${inverted && !scrolled ? "text-white/82" : "text-[#111]"}`}
+          } ${inverted && !scrolled ? "text-white/82" : "text-white/82"}`}
         >
           {navLinks.map(([label, href]) => (
             <Link key={href} href={href} className="transition hover:text-[#145cff]">
@@ -53,7 +53,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
           } ${
             inverted && !scrolled
               ? "bg-white text-[#080808] hover:bg-[#b9f6e8]"
-              : "bg-[#080808] text-white hover:bg-[#145cff]"
+              : "bg-white text-[#080808] hover:bg-[#b9f6e8]"
           }`}
         >
           <span className="hidden min-[381px]:inline">Get In Touch</span>
@@ -61,7 +61,7 @@ export function Header({ inverted = false }: { inverted?: boolean }) {
           <span
             className={`grid place-items-center rounded-full transition duration-300 group-hover:rotate-45 ${
               scrolled ? "size-5 sm:size-6" : "size-5 sm:size-7"
-            } ${inverted && !scrolled ? "bg-[#080808] text-white" : "bg-white text-[#080808]"}`}
+            } ${inverted && !scrolled ? "bg-[#080808] text-white" : "bg-[#145cff] text-white"}`}
           >
             <ArrowRight className="size-4" />
           </span>

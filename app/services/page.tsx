@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ServicesPage() {
   return (
-    <main className="bg-[#fbfaf8] text-[#080808]">
+    <main className="bg-[#050505] text-white">
       <PageHero
         eyebrow="Services"
         title="Integrated services. Compounding growth."
@@ -17,7 +17,7 @@ export default function ServicesPage() {
         <ServiceGrid />
       </section>
 
-      <section className="border-y border-black/8 bg-white px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
+      <section className="border-y border-white/10 bg-[#080808] px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <div>
             <Eyebrow>Sprint Menu</Eyebrow>
@@ -27,11 +27,11 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {services.map((service) => (
-              <article key={service.title} className="border border-black/10 bg-[#fbfaf8] p-6">
+              <article key={service.title} className="border border-white/10 bg-white/6 p-6 shadow-[0_18px_60px_rgba(0,0,0,.2)]">
                 <h3 className="text-xl font-black">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#666]">{service.copy}</p>
-                <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-black/18 px-3 py-1 text-xs font-black text-[#555]">
-                  <span className="grid size-4 shrink-0 place-items-center rounded-full bg-[#080808] text-[0.62rem] text-white">
+                <p className="mt-3 text-sm leading-6 text-white/62">{service.copy}</p>
+                <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/18 px-3 py-1 text-xs font-black text-white/62">
+                  <span className="grid size-4 shrink-0 place-items-center rounded-full bg-[#7ce8d9] text-[0.62rem] text-[#06231f]">
                     ✓
                   </span>
                   Sprint-ready deliverables
@@ -46,11 +46,11 @@ export default function ServicesPage() {
         <h2 className="mx-auto max-w-3xl text-4xl font-light leading-[1.05] tracking-normal">
           Need the right service mix?
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-[#666]">
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/64">
           Start with a short brief and Heron will recommend the fastest route to
           useful growth signals.
         </p>
-        <Button asChild className="mt-6 h-12 w-full rounded-xl bg-[#080808] px-8 font-black text-white hover:bg-[#145cff] sm:h-14 sm:w-auto">
+        <Button asChild className="mt-6 h-12 w-full rounded-xl bg-white px-8 font-black text-[#080808] hover:bg-[#7ce8d9] sm:h-14 sm:w-auto">
           <Link href="/contact-us">
             Start a brief
             <ArrowRight className="size-4" />

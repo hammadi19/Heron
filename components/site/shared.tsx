@@ -94,7 +94,7 @@ const socialLinks = [
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex rounded-full border border-black/28 px-4 py-1 text-sm font-black text-[#555]">
+    <span className="inline-flex rounded-full border border-white/24 bg-white/5 px-4 py-1 text-sm font-black text-white/70">
       {children}
     </span>
   );
@@ -110,8 +110,8 @@ export function PageHero({
   copy: string;
 }) {
   return (
-    <section className="relative isolate flex min-h-[58vh] overflow-hidden bg-[#fbfaf8] text-[#080808] sm:min-h-[62vh]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.18),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.18),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.12),transparent_29%),radial-gradient(circle_at_28%_36%,rgba(170,124,255,.13),transparent_27%)] sm:bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.22),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.15),transparent_29%),radial-gradient(circle_at_28%_36%,rgba(170,124,255,.16),transparent_27%)]" />
+    <section className="relative isolate flex min-h-[58vh] overflow-hidden bg-[#050505] text-white sm:min-h-[62vh]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.34),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.16),transparent_29%),linear-gradient(180deg,#050505_0%,#0b0d14_62%,#050505_100%)]" />
       <div className="hero-hover-field pointer-events-none absolute inset-0 opacity-70" />
       <div className="relative z-10 mx-auto grid w-full max-w-[92rem] self-end gap-7 px-4 pb-12 pt-32 sm:px-8 sm:pb-14 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-40">
         <div>
@@ -120,17 +120,17 @@ export function PageHero({
             <span className="font-serif italic">{title.split(" ").slice(0, 2).join(" ")}</span>{" "}
             {title.split(" ").slice(2).join(" ")}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[#666]">{copy}</p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/66">{copy}</p>
         </div>
-        <div className="grid gap-3 border border-black/10 bg-white/70 p-4 backdrop-blur-xl sm:grid-cols-3">
+        <div className="grid gap-3 border border-white/12 bg-white/8 p-4 text-white shadow-[0_24px_80px_rgba(0,0,0,.36)] backdrop-blur-xl sm:grid-cols-3">
           {[
             ["38%", "qualified demand lift"],
             ["4.8x", "faster test learning"],
             ["90d", "growth sprint plan"],
           ].map(([value, label]) => (
-            <div key={value} className="border-b border-black/10 p-3 text-[#080808] last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
+            <div key={value} className="border-b border-white/12 p-3 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
               <p className="font-serif text-3xl font-light">{value}</p>
-              <p className="mt-2 text-xs font-bold leading-5 text-[#666]">{label}</p>
+              <p className="mt-2 text-xs font-bold leading-5 text-white/58">{label}</p>
             </div>
           ))}
         </div>
@@ -157,29 +157,29 @@ export function SectionTitle({
           <Eyebrow>{eyebrow}</Eyebrow>
         </div>
       ) : null}
-      <h2 className="text-3xl font-light leading-[1.06] tracking-normal text-[#080808] sm:text-5xl">
+      <h2 className="text-3xl font-light leading-[1.06] tracking-normal text-white sm:text-5xl">
         {title}
       </h2>
-      {copy ? <p className="mt-5 text-base leading-7 text-[#666]">{copy}</p> : null}
+      {copy ? <p className="mt-5 text-base leading-7 text-white/64">{copy}</p> : null}
     </div>
   );
 }
 
 export function ServiceGrid() {
   return (
-    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto rounded-2xl border border-black/10 bg-white pb-3 md:grid md:grid-cols-2 md:gap-0 md:overflow-hidden md:pb-0 lg:grid-cols-3">
+    <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto rounded-2xl border border-white/10 bg-white/6 pb-3 md:grid md:grid-cols-2 md:gap-0 md:overflow-hidden md:pb-0 lg:grid-cols-3">
       {services.map((service, index) => (
         <article
           key={service.title}
-          className="group w-[82vw] flex-none snap-start border-r border-black/10 p-5 transition last:border-r-0 hover:bg-[#fbfaf8] md:w-auto md:flex-auto md:border-b md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
+          className="group w-[82vw] flex-none snap-start border-r border-white/10 p-5 text-white transition last:border-r-0 hover:bg-white/8 md:w-auto md:flex-auto md:border-b md:p-6 md:[&:nth-child(2n)]:border-r-0 md:[&:nth-last-child(-n+2)]:border-b-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(3n)]:border-r-0 lg:[&:nth-last-child(-n+3)]:border-b-0"
         >
           <service.icon
             className="service-icon-float size-12"
             style={{ animationDelay: `${index * 0.32}s` }}
           />
           <h3 className="mt-6 text-xl font-black">{service.title}</h3>
-          <p className="mt-3 min-h-20 text-sm leading-6 text-[#666]">{service.copy}</p>
-          <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black text-[#080808] transition group-hover:text-[#145cff]">
+          <p className="mt-3 min-h-20 text-sm leading-6 text-white/62">{service.copy}</p>
+          <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black text-white transition group-hover:text-[#7ce8d9]">
             Explore service
             <ArrowRight className="size-4" />
           </Link>
@@ -193,7 +193,7 @@ export function PortfolioGrid() {
   return (
     <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:grid-cols-3">
       {portfolio.map(([title, label, image], index) => (
-        <article key={`${title}-${label}`} className={`group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl bg-white shadow-[0_22px_70px_rgba(16,24,40,.08)] md:w-auto md:flex-auto ${index === 1 ? "lg:translate-y-8" : ""}`}>
+        <article key={`${title}-${label}`} className={`group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl bg-[#111318] shadow-[0_22px_70px_rgba(0,0,0,.34)] md:w-auto md:flex-auto ${index === 1 ? "lg:translate-y-8" : ""}`}>
           <div className="relative h-56 overflow-hidden sm:h-60">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_34%,rgba(0,0,0,.78)_100%)]" />
@@ -212,14 +212,14 @@ export function NewsGrid() {
   return (
     <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:pb-0">
       {news.map(([date, title, image]) => (
-        <article key={title} className="group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl border border-black/10 bg-white md:w-auto md:flex-auto">
+        <article key={title} className="group w-[82vw] flex-none snap-start overflow-hidden rounded-2xl border border-white/10 bg-[#111318] text-white md:w-auto md:flex-auto">
           <div className="relative h-48 sm:h-52">
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
           <div className="p-6">
             <p className="text-sm font-black text-[#145cff]">{date}</p>
             <h3 className="mt-3 text-xl font-black leading-snug">{title}</h3>
-            <p className="mt-3 text-sm leading-6 text-[#666]">
+            <p className="mt-3 text-sm leading-6 text-white/62">
               Practical thinking for teams turning attention into measurable demand.
             </p>
             <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black">
@@ -243,16 +243,16 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact-us" className="border-t border-black/8 bg-white px-4 text-[#080808] sm:px-8">
-      <div className="mx-auto grid max-w-[92rem] lg:grid-cols-[0.66fr_1.08fr] lg:border-x lg:border-black/8">
-        <div className="flex flex-col justify-between border-black/8 py-10 lg:border-r lg:px-10 lg:py-12">
+    <footer id="contact-us" className="border-t border-white/10 bg-[#050505] px-4 text-white sm:px-8">
+      <div className="mx-auto grid max-w-[92rem] lg:grid-cols-[0.66fr_1.08fr] lg:border-x lg:border-white/10">
+        <div className="flex flex-col justify-between border-white/10 py-10 lg:border-r lg:px-10 lg:py-12">
           <div>
-            <HeronLogo />
+            <HeronLogo inverted />
 
             <div className="mt-10 sm:mt-16">
               <div>
                 <h3 className="text-lg font-black xl:text-xl">London Office</h3>
-                <p className="mt-4 max-w-xs text-base leading-7 text-[#555]">
+                <p className="mt-4 max-w-xs text-base leading-7 text-white/58">
                   45 King&apos;s Road, 3rd Floor Chelsea,
                   <br />
                   London SW3 5EP, UK
@@ -260,14 +260,14 @@ export function Footer() {
               </div>
             </div>
 
-            <form className="mt-8 flex h-12 max-w-2xl items-center rounded-full border border-black/10 bg-white p-1 shadow-[0_18px_60px_rgba(16,24,40,.06)] sm:mt-10">
+            <form className="mt-8 flex h-12 max-w-2xl items-center rounded-full border border-white/12 bg-white/8 p-1 shadow-[0_18px_60px_rgba(0,0,0,.25)] sm:mt-10">
               <input
-                className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm outline-none placeholder:text-[#8a8a8a] sm:px-5 sm:text-base"
+                className="h-full min-w-0 flex-1 bg-transparent px-4 text-sm text-white outline-none placeholder:text-white/42 sm:px-5 sm:text-base"
                 placeholder="Type your Email address"
                 aria-label="Newsletter email"
               />
               <button
-                className="grid size-10 shrink-0 place-items-center rounded-full bg-[#080808] text-white transition hover:bg-[#145cff]"
+                className="grid size-10 shrink-0 place-items-center rounded-full bg-white text-[#080808] transition hover:bg-[#7ce8d9]"
                 type="button"
                 aria-label="Subscribe to newsletter"
               >
@@ -276,17 +276,17 @@ export function Footer() {
             </form>
           </div>
 
-          <div className="mt-10 flex flex-col gap-6 text-sm text-[#555] sm:mt-12 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 flex flex-col gap-6 text-sm text-white/56 sm:mt-12 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              Copyright 2026 <span className="font-black text-[#080808]">Heron</span> | All Right Reserved.
+              Copyright 2026 <span className="font-black text-white">Heron</span> | All Right Reserved.
             </p>
-            <div className="flex flex-wrap items-center gap-3 text-base font-black text-[#080808] sm:gap-5">
+            <div className="flex flex-wrap items-center gap-3 text-base font-black text-white sm:gap-5">
               {socialLinks.map(({ label, Icon }) => (
                 <a
                   key={label}
                   href="/contact-us"
                   aria-label={label}
-                  className="grid size-10 place-items-center rounded-full border border-black/10 text-[#080808] transition hover:-translate-y-0.5 hover:border-[#145cff] hover:bg-[#145cff] hover:text-white"
+                  className="grid size-10 place-items-center rounded-full border border-white/12 text-white transition hover:-translate-y-0.5 hover:border-[#7ce8d9] hover:bg-[#7ce8d9] hover:text-[#06231f]"
                 >
                   <Icon className="size-4" />
                 </a>
@@ -295,7 +295,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col border-t border-black/8 py-10 lg:border-t-0 lg:px-14 lg:py-12">
+        <div className="flex flex-col border-t border-white/10 py-10 lg:border-t-0 lg:px-14 lg:py-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl">
               Let&apos;s create the{" "}
@@ -303,22 +303,22 @@ export function Footer() {
             </h2>
             <Link
               href="/contact-us"
-              className="inline-flex h-14 w-fit items-center gap-2 rounded-xl bg-[#080808] px-7 text-base font-black text-white transition hover:bg-[#145cff]"
+              className="inline-flex h-14 w-fit items-center gap-2 rounded-xl bg-white px-7 text-base font-black text-[#080808] transition hover:bg-[#7ce8d9]"
             >
               Let&apos;s Talk
               <ArrowRight className="size-5" />
             </Link>
           </div>
 
-          <div className="mt-10 grid flex-1 border-t border-black/8 sm:mt-14 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
-            <div className="border-black/8 py-9 lg:border-r lg:pr-10">
+          <div className="mt-10 grid flex-1 border-t border-white/10 sm:mt-14 lg:grid-cols-[1.05fr_0.78fr_0.78fr]">
+            <div className="border-white/10 py-9 lg:border-r lg:pr-10">
               <h3 className="text-lg font-black xl:text-xl">Contact Us</h3>
-              <div className="mt-6 grid gap-4 text-base text-[#555]">
-                <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
+              <div className="mt-6 grid gap-4 text-base text-white/58">
+                <p className="contact-icon-row flex items-center gap-4 transition hover:text-white">
                   <PhoneIcon className="contact-icon-pop size-7 shrink-0 sm:size-8" />
                   <span className="break-all">+44 0000 000000</span>
                 </p>
-                <p className="contact-icon-row flex items-center gap-4 transition hover:text-[#080808]">
+                <p className="contact-icon-row flex items-center gap-4 transition hover:text-white">
                   <MailIcon className="contact-icon-pop size-7 shrink-0 sm:size-8" />
                   <span className="break-all">hello@heron-marketing.com</span>
                 </p>
@@ -326,11 +326,11 @@ export function Footer() {
             </div>
 
             {[0, 1].map((column) => (
-              <div key={column} className="border-black/8 py-9 lg:border-r lg:px-10 lg:last:border-r-0">
+              <div key={column} className="border-white/10 py-9 lg:border-r lg:px-10 lg:last:border-r-0">
                 <h3 className="text-lg font-black xl:text-xl">Useful Link</h3>
-                <div className="mt-6 grid gap-4 text-base text-[#555]">
+                <div className="mt-6 grid gap-4 text-base text-white/58">
                   {usefulLinks.map(([label, href]) => (
-                    <Link key={`${column}-${href}`} href={href} className="transition hover:text-[#145cff]">
+                    <Link key={`${column}-${href}`} href={href} className="transition hover:text-[#7ce8d9]">
                       {label}
                     </Link>
                   ))}

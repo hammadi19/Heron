@@ -86,42 +86,42 @@ const faqs = [
 
 function DummyLogoMark({ type }: { type: string }) {
   return (
-    <svg viewBox="0 0 48 48" className="size-9 shrink-0" aria-hidden="true">
+    <svg viewBox="0 0 48 48" className="size-9 shrink-0 text-white/68" aria-hidden="true">
       {type === "stack" ? (
         <>
-          <rect x="10" y="12" width="26" height="26" rx="7" fill="#101010" opacity="0.1" />
-          <rect x="15" y="9" width="26" height="26" rx="7" fill="#101010" />
+          <rect x="10" y="12" width="26" height="26" rx="7" fill="currentColor" opacity="0.18" />
+          <rect x="15" y="9" width="26" height="26" rx="7" fill="currentColor" />
         </>
       ) : null}
       {type === "cloud" ? (
-        <path fill="#101010" d="M16.4 33h17.2c5.1 0 8.4-3.1 8.4-7.4c0-4-2.9-7-7.1-7.3C33.3 14 29.3 11 24.6 11c-5.6 0-10.1 4-10.7 9.3C9.4 21 6 23.7 6 27.5C6 30.8 8.8 33 16.4 33Z" />
+        <path fill="currentColor" d="M16.4 33h17.2c5.1 0 8.4-3.1 8.4-7.4c0-4-2.9-7-7.1-7.3C33.3 14 29.3 11 24.6 11c-5.6 0-10.1 4-10.7 9.3C9.4 21 6 23.7 6 27.5C6 30.8 8.8 33 16.4 33Z" />
       ) : null}
       {type === "bolt" ? (
-        <path fill="#101010" d="M28.5 4L10 27.6h13.1L19.4 44L38 20.1H24.8L28.5 4Z" />
+        <path fill="currentColor" d="M28.5 4L10 27.6h13.1L19.4 44L38 20.1H24.8L28.5 4Z" />
       ) : null}
       {type === "frame" ? (
         <>
-          <rect x="9" y="10" width="30" height="28" rx="6" fill="none" stroke="#101010" strokeWidth="5" />
-          <circle cx="19" cy="21" r="4" fill="#101010" />
-          <path d="M16 32l7-7l5 5l4-4l5 6" fill="none" stroke="#101010" strokeWidth="4" strokeLinecap="round" />
+          <rect x="9" y="10" width="30" height="28" rx="6" fill="none" stroke="currentColor" strokeWidth="5" />
+          <circle cx="19" cy="21" r="4" fill="currentColor" />
+          <path d="M16 32l7-7l5 5l4-4l5 6" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
         </>
       ) : null}
       {type === "pin" ? (
-        <path fill="#101010" d="M24 5c-7.1 0-12.9 5.4-12.9 12.1c0 9.2 12.9 25.9 12.9 25.9s12.9-16.7 12.9-25.9C36.9 10.4 31.1 5 24 5Zm0 17.2a5 5 0 1 1 0-10a5 5 0 0 1 0 10Z" />
+        <path fill="currentColor" d="M24 5c-7.1 0-12.9 5.4-12.9 12.1c0 9.2 12.9 25.9 12.9 25.9s12.9-16.7 12.9-25.9C36.9 10.4 31.1 5 24 5Zm0 17.2a5 5 0 1 1 0-10a5 5 0 0 1 0 10Z" />
       ) : null}
       {type === "spark" ? (
-        <path fill="#101010" d="M24 4l5.3 14.7L44 24l-14.7 5.3L24 44l-5.3-14.7L4 24l14.7-5.3L24 4Z" />
+        <path fill="currentColor" d="M24 4l5.3 14.7L44 24l-14.7 5.3L24 44l-5.3-14.7L4 24l14.7-5.3L24 4Z" />
       ) : null}
       {type === "wave" ? (
-        <path fill="none" stroke="#101010" strokeWidth="6" strokeLinecap="round" d="M6 29c7.5-13 14.9-13 22.4 0c4.6 8 9.1 8 13.6 0" />
+        <path fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" d="M6 29c7.5-13 14.9-13 22.4 0c4.6 8 9.1 8 13.6 0" />
       ) : null}
       {type === "bloom" ? (
         <>
-          <circle cx="24" cy="24" r="6" fill="#101010" />
-          <circle cx="24" cy="10" r="6" fill="#101010" opacity="0.8" />
-          <circle cx="38" cy="24" r="6" fill="#101010" opacity="0.8" />
-          <circle cx="24" cy="38" r="6" fill="#101010" opacity="0.8" />
-          <circle cx="10" cy="24" r="6" fill="#101010" opacity="0.8" />
+          <circle cx="24" cy="24" r="6" fill="currentColor" />
+          <circle cx="24" cy="10" r="6" fill="currentColor" opacity="0.8" />
+          <circle cx="38" cy="24" r="6" fill="currentColor" opacity="0.8" />
+          <circle cx="24" cy="38" r="6" fill="currentColor" opacity="0.8" />
+          <circle cx="10" cy="24" r="6" fill="currentColor" opacity="0.8" />
         </>
       ) : null}
     </svg>
@@ -130,9 +130,9 @@ function DummyLogoMark({ type }: { type: string }) {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fbfaf8] text-[#080808]">
-      <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#fbfaf8]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.18),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.13),transparent_30%),radial-gradient(circle_at_35%_42%,rgba(170,124,255,.14),transparent_28%)] sm:bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.22),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.24),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.16),transparent_30%),radial-gradient(circle_at_35%_42%,rgba(170,124,255,.18),transparent_28%)]" />
+    <main className="min-h-screen bg-[#050505] text-white">
+      <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#050505]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.36),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.15),transparent_30%),linear-gradient(180deg,#050505_0%,#0b0d14_58%,#050505_100%)]" />
         <div className="hero-hover-field pointer-events-none absolute inset-0" />
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
           <div className="min-w-0">
@@ -141,13 +141,13 @@ export default function Home() {
               <span className="block">experiences that convert</span>
             </h1>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <Button asChild className="h-12 w-full rounded-xl bg-[#080808] px-6 text-sm font-black text-white hover:bg-[#145cff] sm:h-14 sm:w-auto sm:px-8 sm:text-base">
+              <Button asChild className="h-12 w-full rounded-xl bg-white px-6 text-sm font-black text-[#080808] hover:bg-[#7ce8d9] sm:h-14 sm:w-auto sm:px-8 sm:text-base">
                 <Link href="/contact-us">
                   Let&apos;s Talk
                   <ArrowRight className="size-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="h-12 w-full rounded-xl border-[#111] bg-white/50 px-6 text-sm font-black text-[#080808] hover:bg-white sm:h-14 sm:w-auto sm:px-8 sm:text-base">
+              <Button asChild variant="outline" className="h-12 w-full rounded-xl border-white/22 bg-white/8 px-6 text-sm font-black text-white hover:bg-white/14 sm:h-14 sm:w-auto sm:px-8 sm:text-base">
                 <Link href="/projects">
                   View Our Work
                   <ArrowRight className="size-5" />
@@ -158,7 +158,7 @@ export default function Home() {
 
           <div className="min-w-0">
             <div className="relative">
-              <div className="relative h-[17.5rem] overflow-hidden rounded-[1.35rem] bg-[#e8edf2] shadow-[0_26px_90px_rgba(16,24,40,.14)] min-[380px]:h-[19rem] sm:h-[25rem] sm:rounded-[2rem]">
+              <div className="relative h-[17.5rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[19rem] sm:h-[25rem] sm:rounded-[2rem]">
                 <Image
                   src="/heron-hero-bright.png"
                   alt="Heron Marketing strategists reviewing a growth plan"
@@ -173,20 +173,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/8 bg-white px-4 py-8 sm:px-8 sm:py-9">
+      <section className="border-y border-white/10 bg-[#080808] px-4 py-8 sm:px-8 sm:py-9">
         <div className="mx-auto grid max-w-[92rem] gap-5 md:grid-cols-[16rem_1fr] md:items-center md:gap-8">
           <p className="text-sm font-black leading-5">Trusted by growth-focused teams</p>
           <div className="relative overflow-hidden">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#080808] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#080808] to-transparent" />
             <div className="logo-marquee-track flex w-max items-center gap-6">
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`${client.name}-${index}`}
-                  className="flex h-14 min-w-40 items-center gap-3 rounded-full border border-black/8 bg-[#fbfaf8] px-4 text-[#101010] shadow-[0_12px_40px_rgba(16,24,40,.04)] sm:h-16 sm:min-w-48 sm:px-5"
+                  className="flex h-14 min-w-40 items-center gap-3 rounded-full border border-white/10 bg-white/6 px-4 text-white shadow-[0_12px_40px_rgba(0,0,0,.2)] sm:h-16 sm:min-w-48 sm:px-5"
                 >
                   <DummyLogoMark type={client.mark} />
-                  <span className="text-lg font-black text-[#6c6c6c] sm:text-xl">{client.name}</span>
+                  <span className="text-lg font-black text-white/62 sm:text-xl">{client.name}</span>
                 </div>
               ))}
             </div>
@@ -200,14 +200,14 @@ export default function Home() {
           <Eyebrow>What We Do</Eyebrow>
           <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
             {services.map((service, index) => (
-              <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-black/10 bg-white/74 p-5 shadow-[0_18px_50px_rgba(16,24,40,.05)] lg:w-auto lg:flex-auto lg:rounded-none lg:border-0 lg:border-r lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
+              <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 shadow-[0_18px_50px_rgba(0,0,0,.18)] lg:w-auto lg:flex-auto lg:rounded-none lg:border-0 lg:border-r lg:border-white/10 lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
                 <service.icon
                   className="service-icon-float size-12"
                   style={{ animationDelay: `${index * 0.32}s` }}
                 />
                 <h2 className="mt-5 text-xl font-black">{service.title}</h2>
-                <p className="mt-4 max-w-xs text-sm leading-6 text-[#666]">{service.copy}</p>
-                <Link href="/services" className="mt-5 inline-flex text-[#080808] transition hover:text-[#145cff]" aria-label={`Explore ${service.title}`}>
+                <p className="mt-4 max-w-xs text-sm leading-6 text-white/62">{service.copy}</p>
+                <Link href="/services" className="mt-5 inline-flex text-white transition hover:text-[#7ce8d9]" aria-label={`Explore ${service.title}`}>
                   <ArrowRight className="size-5" />
                 </Link>
               </article>
@@ -225,7 +225,7 @@ export default function Home() {
               <br />
               results and delight customers
             </h2>
-            <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-[#222]">
+            <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-white/70">
               We are a creative growth studio specializing in sharp strategy,
               high-converting digital experiences, and marketing systems that
               help ambitious brands scale with confidence.
@@ -233,11 +233,11 @@ export default function Home() {
 
             <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 sm:grid sm:gap-6 sm:overflow-visible sm:pb-0">
               {aboutHighlights.map(([title, copy, Icon]) => (
-                <div key={title as string} className="w-[82vw] flex-none snap-start rounded-2xl border border-black/10 bg-white p-5 sm:grid sm:w-auto sm:flex-auto sm:grid-cols-[4rem_1fr] sm:border-0 sm:bg-transparent sm:p-0">
+                <div key={title as string} className="w-[82vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 sm:grid sm:w-auto sm:flex-auto sm:grid-cols-[4rem_1fr] sm:border-0 sm:bg-transparent sm:p-0">
                   <Icon className="size-14" />
                   <div>
                     <h3 className="text-xl font-black">{title as string}</h3>
-                    <p className="mt-2 text-base leading-7 text-[#333]">{copy as string}</p>
+                    <p className="mt-2 text-base leading-7 text-white/64">{copy as string}</p>
                   </div>
                 </div>
               ))}
@@ -245,7 +245,7 @@ export default function Home() {
           </div>
 
           <div className="min-w-0">
-            <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#e8edf2] sm:h-[26rem] sm:rounded-[2rem]">
+            <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[26rem] sm:rounded-[2rem]">
               <Image
                 src="/heron-about-home.png"
                 alt="Heron strategist designing digital growth systems"
@@ -257,7 +257,7 @@ export default function Home() {
             <div className="mt-6 grid gap-5 sm:grid-cols-[7rem_1fr] sm:items-center sm:gap-6">
               <AwardIcon className="size-20" />
               <div>
-                <blockquote className="font-serif text-2xl italic leading-tight text-[#555] sm:text-3xl">
+                <blockquote className="font-serif text-2xl italic leading-tight text-white/70 sm:text-3xl">
                   “Marketing is not just how it looks, but how it works. We
                   build systems that perform and connect.”
                 </blockquote>
@@ -270,7 +270,7 @@ export default function Home() {
 
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.05fr] lg:items-center">
-          <div className="relative h-[18rem] overflow-hidden rounded-[1.2rem] bg-[#e8edf2] sm:h-[23rem]">
+          <div className="relative h-[18rem] overflow-hidden rounded-[1.2rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[23rem]">
             <Image
               src="/heron-growth-command.png"
               alt="Heron team collaborating on a digital growth campaign"
@@ -283,13 +283,13 @@ export default function Home() {
             <Eyebrow>Our Process</Eyebrow>
             <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-4 md:gap-9 md:overflow-visible md:pb-0">
               {process.map(([number, title, copy], index) => (
-                <article key={number} className="w-[76vw] flex-none snap-start rounded-2xl border border-black/10 bg-white p-5 md:w-auto md:flex-auto md:rounded-none md:border-0 md:bg-transparent md:p-0">
+                <article key={number} className="w-[76vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 md:w-auto md:flex-auto md:rounded-none md:border-0 md:bg-transparent md:p-0">
                   <p className={`text-4xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
                     {number}
                   </p>
-                  <div className="mt-5 h-px bg-black/18" />
+                  <div className="mt-5 h-px bg-white/18" />
                   <h3 className="mt-5 text-lg font-black">{title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-[#666]">{copy}</p>
+                  <p className="mt-4 text-sm leading-7 text-white/62">{copy}</p>
                 </article>
               ))}
             </div>
@@ -308,7 +308,7 @@ export default function Home() {
                 with measurable outcomes
               </h2>
             </div>
-            <Button asChild variant="outline" className="h-12 w-full rounded-xl border-[#111] px-7 font-black sm:h-14 sm:w-auto">
+            <Button asChild variant="outline" className="h-12 w-full rounded-xl border-white/22 bg-white/6 px-7 font-black text-white hover:bg-white/12 sm:h-14 sm:w-auto">
               <Link href="/projects">
                 View All Work
                 <ArrowRight className="size-4" />
@@ -332,7 +332,7 @@ export default function Home() {
                     <h3 className="text-xl font-black">{title}</h3>
                     <p className="mt-1 text-sm text-white/76">{label}</p>
                   </div>
-                  <Link href="/projects" className="grid size-12 shrink-0 place-items-center rounded-full bg-white text-[#080808] transition hover:bg-[#145cff] hover:text-white" aria-label={`View ${title}`}>
+                  <Link href="/projects" className="grid size-12 shrink-0 place-items-center rounded-full bg-white text-[#080808] transition hover:bg-[#7ce8d9]" aria-label={`View ${title}`}>
                     <ArrowRight className="size-5" />
                   </Link>
                 </div>
@@ -342,16 +342,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-black/8 bg-white px-4 py-12 sm:px-8 sm:py-14">
+      <section className="border-y border-white/10 bg-[#080808] px-4 py-12 sm:px-8 sm:py-14">
         <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
           {[
             ["38%", "Average increase in qualified leads within 90 days"],
             ["4.8x", "Average return on ad spend across campaigns"],
             ["90 days", "Typical time to meaningful performance lift"],
           ].map(([value, label]) => (
-            <div key={value} className="w-[74vw] flex-none snap-start rounded-2xl border border-black/10 bg-[#fbfaf8] p-6 text-center md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:bg-transparent md:p-0 md:last:border-r-0">
+            <div key={value} className="w-[74vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-6 text-center md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:border-white/10 md:bg-transparent md:p-0 md:last:border-r-0">
               <p className="font-serif text-5xl font-light">{value}</p>
-              <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-[#555]">{label}</p>
+              <p className="mx-auto mt-4 max-w-xs text-sm leading-7 text-white/60">{label}</p>
             </div>
           ))}
         </div>
@@ -367,12 +367,12 @@ export default function Home() {
             </blockquote>
           </div>
           <div className="flex items-center gap-5 lg:justify-end">
-            <div className="relative size-20 overflow-hidden rounded-full bg-[#e8edf2]">
+            <div className="relative size-20 overflow-hidden rounded-full bg-[#111318] ring-1 ring-white/10">
               <Image src="/heron-hero-office.png" alt="Client portrait" fill sizes="80px" className="object-cover" />
             </div>
             <div>
               <p className="text-lg font-black">Michael Tran</p>
-              <p className="mt-1 text-sm text-[#666]">Head of Growth, Layer</p>
+              <p className="mt-1 text-sm text-white/58">Head of Growth, Layer</p>
               <div className="mt-2 flex gap-1 text-[#f5a400]">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={star} className="size-4 fill-current stroke-[2.2]" />
@@ -386,14 +386,14 @@ export default function Home() {
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
         <div className="mx-auto max-w-[92rem]">
           <Eyebrow>Frequently Asked Questions</Eyebrow>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/6">
             {faqs.map((faq) => (
-              <details key={faq} className="group border-b border-black/10 px-6 py-5 last:border-b-0">
+              <details key={faq} className="group border-b border-white/10 px-6 py-5 last:border-b-0">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-base font-bold">
                   {faq}
                   <Plus className="size-5 shrink-0 transition group-open:rotate-45" />
                 </summary>
-                <p className="mt-4 max-w-3xl text-sm leading-7 text-[#666]">
+                <p className="mt-4 max-w-3xl text-sm leading-7 text-white/62">
                   We start by defining the business goal, then connect strategy,
                   channel execution, conversion design, and reporting into one
                   practical sprint plan.
@@ -405,7 +405,7 @@ export default function Home() {
       </section>
 
       <section className="px-4 pb-12 sm:px-8">
-        <div className="relative mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl bg-[#050505] px-6 py-10 text-white sm:px-10 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-12">
+        <div className="relative mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f15] px-6 py-10 text-white shadow-[0_30px_100px_rgba(0,0,0,.34)] sm:px-10 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-12">
           <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_72%_50%,rgba(124,232,217,.62),transparent_34%),radial-gradient(circle_at_90%_30%,rgba(20,92,255,.5),transparent_26%)]" />
           <div className="relative z-10">
             <h2 className="max-w-xl text-4xl font-light leading-[1.05] tracking-normal">

@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     ],
   },
   other: {
-    "msapplication-TileColor": "#145cff",
+    "msapplication-TileColor": "#050505",
     "msapplication-config": "/browserconfig.xml",
   },
   openGraph: {
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#145cff",
+  themeColor: "#050505",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
