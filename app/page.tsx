@@ -160,12 +160,9 @@ export default function Home() {
         <div className="hero-hover-field pointer-events-none absolute inset-0" />
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
           <div className="min-w-0">
-            <div className="inline-flex items-center gap-4 border-2 border-[#8b5cf6] px-3 py-1 text-[0.68rem] font-black uppercase tracking-[0.42em] text-white sm:text-xs">
-              <span className="h-0.5 w-12 bg-[#8b5cf6]" />
-              Heron Marketing
-            </div>
-            <h1 className="mt-8 max-w-[54rem] text-[2.6rem] font-black leading-[1.05] tracking-normal min-[380px]:text-[2.95rem] sm:text-[4.15rem] lg:text-[4.85rem]">
-              Marketing that make your business impossible to ignore.
+            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
+              <span className="block font-serif italic">Marketing that make</span>
+              <span className="block">your business impossible to ignore.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/68 sm:text-lg">
               Helping businesses to turn their online presence into a
