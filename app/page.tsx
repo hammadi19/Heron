@@ -83,9 +83,9 @@ const process = [
 ];
 
 const work = [
-  ["Bentleys", "Website re-design and advertising push", "/heron-hero-office.png"],
-  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-marketing-illustration.png"],
-  ["Wreake Valley Craftsmen", "New website design", "/heron-growth-command.png"],
+  ["Bentleys", "Website re-design and advertising push", "/heron-web-design-desk.jpg"],
+  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-web-ui-showcase.png"],
+  ["Wreake Valley Craftsmen", "New website design", "/heron-future-webdesign.jpg"],
 ];
 
 const faqs = [
@@ -189,18 +189,18 @@ export default function Home() {
             <div className="relative min-h-[22rem] sm:min-h-[30rem]">
               <div className="absolute right-0 top-0 h-[16.5rem] w-[82%] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[18rem] sm:h-[24rem] sm:rounded-[2rem]">
                 <Image
-                  src="/heron-hero-bright.png"
-                  alt="Heron Marketing strategists reviewing a growth plan"
+                  src="/heron-web-ui-showcase.png"
+                  alt="Responsive web design interface with Heron-inspired digital layouts"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 38vw"
-                  className="object-cover"
+                  className="object-cover object-[58%_45%]"
                 />
               </div>
               <div className="absolute bottom-0 left-0 h-[13rem] w-[58%] overflow-hidden rounded-[1.25rem] bg-[#111318] shadow-[0_24px_80px_rgba(0,0,0,.45)] ring-1 ring-white/10 sm:h-[18rem] sm:rounded-[1.6rem]">
                 <Image
-                  src="/heron-growth-command.png"
-                  alt="Heron Marketing team planning digital growth"
+                  src="/heron-future-webdesign.jpg"
+                  alt="Futuristic web design dashboard and interface system"
                   fill
                   priority
                   sizes="(max-width: 1024px) 60vw, 25vw"
@@ -286,7 +286,7 @@ export default function Home() {
           <div className="min-w-0">
             <div className="relative h-[19rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[26rem] sm:rounded-[2rem]">
               <Image
-                src="/heron-about-home.png"
+                src="/heron-web-design-desk.jpg"
                 alt="Heron strategist designing digital growth systems"
                 fill
                 sizes="(max-width: 1024px) 100vw, 46vw"
@@ -315,7 +315,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.72fr_1.05fr] lg:items-center">
           <div className="relative h-[18rem] overflow-hidden rounded-[1.2rem] bg-[#111318] shadow-[0_26px_90px_rgba(0,0,0,.3)] ring-1 ring-white/10 sm:h-[23rem]">
             <Image
-              src="/heron-growth-command.png"
+              src="/heron-future-webdesign.jpg"
               alt="Heron team collaborating on a digital growth campaign"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

@@ -69,17 +69,17 @@ export const services = [
 ];
 
 export const portfolio = [
-  ["Bentleys", "Website re-design and advertising push", "/heron-hero-office.png"],
-  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-marketing-illustration.png"],
-  ["Wreake Valley Craftsmen", "New website design", "/heron-growth-command.png"],
-  ["Local Services Brand", "SEO and AEO growth template", "/heron-hero-bright.png"],
-  ["Retail Growth Sprint", "PPC and social campaign framework", "/heron-about-home.png"],
+  ["Bentleys", "Website re-design and advertising push", "/heron-web-design-desk.jpg"],
+  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-web-ui-showcase.png"],
+  ["Wreake Valley Craftsmen", "New website design", "/heron-future-webdesign.jpg"],
+  ["Local Services Brand", "SEO and AEO growth template", "/heron-web-ui-showcase.png"],
+  ["Retail Growth Sprint", "PPC and social campaign framework", "/heron-future-webdesign.jpg"],
 ];
 
 export const news = [
-  ["20 March 2026", "How To Build A Marketing Funnel That Learns Faster", "/heron-hero-office.png"],
-  ["25 April 2026", "The Founder Guide To Campaign Messaging That Converts", "/heron-growth-command.png"],
-  ["30 July 2026", "Why Brand And Performance Should Work Together", "/heron-marketing-illustration.png"],
+  ["20 March 2026", "How To Build A Marketing Funnel That Learns Faster", "/heron-web-design-desk.jpg"],
+  ["25 April 2026", "The Founder Guide To Campaign Messaging That Converts", "/heron-future-webdesign.jpg"],
+  ["30 July 2026", "Why Brand And Performance Should Work Together", "/heron-web-ui-showcase.png"],
 ];
 
 export const faqs = [
