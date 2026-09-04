@@ -156,7 +156,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
       <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#050505]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(20,92,255,.36),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.15),transparent_30%),linear-gradient(180deg,#050505_0%,#0b0d14_58%,#050505_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_18%,rgba(139,92,246,.36),transparent_28%),radial-gradient(circle_at_64%_34%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_57%_58%,rgba(255,112,88,.15),transparent_30%),linear-gradient(180deg,#050505_0%,#0b0d14_58%,#050505_100%)]" />
         <div className="hero-hover-field pointer-events-none absolute inset-0" />
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
           <div className="min-w-0">
@@ -332,7 +332,7 @@ export default function Home() {
             <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-4 md:gap-9 md:overflow-visible md:pb-0">
               {process.map(([number, title, copy], index) => (
                 <article key={number} className="w-[76vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 md:w-auto md:flex-auto md:rounded-none md:border-0 md:bg-transparent md:p-0">
-                  <p className={`text-4xl font-light ${index === 0 ? "text-[#145cff]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
+                  <p className={`text-4xl font-light ${index === 0 ? "text-[#8b5cf6]" : index === 1 ? "text-[#ff7058]" : index === 2 ? "text-[#9d75ff]" : "text-[#16c7c0]"}`}>
                     {number}
                   </p>
                   <div className="mt-5 h-px bg-white/18" />
@@ -482,7 +482,7 @@ export default function Home() {
 
       <section className="px-4 pb-12 sm:px-8">
         <div className="relative mx-auto grid max-w-[92rem] overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f15] px-6 py-10 text-white shadow-[0_30px_100px_rgba(0,0,0,.34)] sm:px-10 lg:grid-cols-[1fr_0.62fr] lg:items-center lg:px-12">
-          <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_72%_50%,rgba(124,232,217,.62),transparent_34%),radial-gradient(circle_at_90%_30%,rgba(20,92,255,.5),transparent_26%)]" />
+          <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_72%_50%,rgba(124,232,217,.62),transparent_34%),radial-gradient(circle_at_90%_30%,rgba(139,92,246,.5),transparent_26%)]" />
           <div className="relative z-10">
             <h2 className="max-w-xl text-4xl font-light leading-[1.05] tracking-normal">
               Want Heron to help you build your digital brand?

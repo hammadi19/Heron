@@ -1,8 +1,8 @@
 <svg width="260" height="84" viewBox="0 0 260 84" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M53.7 8.9C42.1 10.8 32.9 17.7 27.4 28C21.2 39.7 17.4 52.7 6 63.4C22.4 58.9 33.3 47.2 39.7 31.5C42.6 24.2 46.6 17.8 53.7 8.9Z" stroke="#080808" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M27.8 29.1C39.8 26.7 51.2 28.5 64 36.2C49.4 38 38 43.5 28.6 53.2" stroke="#145CFF" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M49.7 9.2C55.5 11.7 60.6 15.9 64.1 21.3" stroke="#145CFF" stroke-width="4.6" stroke-linecap="round"/>
-  <circle cx="56.5" cy="9.6" r="3.2" fill="#145CFF"/>
+  <path d="M27.8 29.1C39.8 26.7 51.2 28.5 64 36.2C49.4 38 38 43.5 28.6 53.2" stroke="#8b5cf6" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M49.7 9.2C55.5 11.7 60.6 15.9 64.1 21.3" stroke="#8b5cf6" stroke-width="4.6" stroke-linecap="round"/>
+  <circle cx="56.5" cy="9.6" r="3.2" fill="#8b5cf6"/>
   <text x="84" y="43" fill="#080808" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="900" letter-spacing="3.2">HERON</text>
-  <text x="87" y="62" fill="#145CFF" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="900" letter-spacing="8.2">MARKETING</text>
+  <text x="87" y="62" fill="#8b5cf6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="900" letter-spacing="8.2">MARKETING</text>
 </svg>

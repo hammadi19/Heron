@@ -41,7 +41,7 @@ export function Header({ inverted = true }: { inverted?: boolean }) {
           } ${inverted && !scrolled ? "text-white/82" : "text-white/82"}`}
         >
           {navLinks.map(([label, href]) => (
-            <Link key={href} href={href} className="transition hover:text-[#145cff]">
+            <Link key={href} href={href} className="transition hover:text-[#8b5cf6]">
               {label}
             </Link>
           ))}
@@ -61,7 +61,7 @@ export function Header({ inverted = true }: { inverted?: boolean }) {
           <span
             className={`grid place-items-center rounded-full transition duration-300 group-hover:rotate-45 ${
               scrolled ? "size-5 sm:size-6" : "size-5 sm:size-7"
-            } ${inverted && !scrolled ? "bg-[#080808] text-white" : "bg-[#145cff] text-white"}`}
+            } ${inverted && !scrolled ? "bg-[#080808] text-white" : "bg-[#8b5cf6] text-white"}`}
           >
             <ArrowRight className="size-4" />
           </span>

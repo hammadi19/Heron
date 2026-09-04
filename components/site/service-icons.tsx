@@ -52,7 +52,7 @@ function MarketingIcon({
     <Icon
       icon={icon}
       className={className}
-      color="#145CFF"
+      color="#8b5cf6"
       aria-hidden="true"
       {...props}
     />

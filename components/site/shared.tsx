@@ -29,7 +29,7 @@ export const services = [
     slug: "web-design-services",
     copy: "Modern web design, redesigns, hosting, maintenance, and support for businesses that need a stronger first impression.",
     icon: WebIcon,
-    color: "#0f8bff",
+    color: "#8b5cf6",
   },
   {
     title: "Social Media Advertising",
@@ -50,7 +50,7 @@ export const services = [
     slug: "ppc",
     copy: "Google Ads, Microsoft Ads, targeting, budgets, bid optimisation, and reporting built to reduce wasted spend.",
     icon: AnalyticsIcon,
-    color: "#7257ff",
+    color: "#8b5cf6",
   },
   {
     title: "YouTube",
@@ -116,7 +116,7 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate flex min-h-[58vh] overflow-hidden bg-[#050505] text-white sm:min-h-[62vh]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(20,92,255,.34),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.16),transparent_29%),linear-gradient(180deg,#050505_0%,#0b0d14_62%,#050505_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_44%_6%,rgba(139,92,246,.34),transparent_28%),radial-gradient(circle_at_72%_18%,rgba(124,232,217,.2),transparent_24%),radial-gradient(circle_at_58%_58%,rgba(255,112,88,.16),transparent_29%),linear-gradient(180deg,#050505_0%,#0b0d14_62%,#050505_100%)]" />
       <div className="hero-hover-field pointer-events-none absolute inset-0 opacity-70" />
       <div className="relative z-10 mx-auto grid w-full max-w-[92rem] self-end gap-7 px-4 pb-12 pt-32 sm:px-8 sm:pb-14 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-20 lg:pt-40">
         <div>
@@ -222,7 +222,7 @@ export function NewsGrid() {
             <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-500 group-hover:scale-105" />
           </div>
           <div className="p-6">
-            <p className="text-sm font-black text-[#145cff]">{date}</p>
+            <p className="text-sm font-black text-[#8b5cf6]">{date}</p>
             <h3 className="mt-3 text-xl font-black leading-snug">{title}</h3>
             <p className="mt-3 text-sm leading-6 text-white/62">
               Practical thinking for teams turning attention into measurable demand.

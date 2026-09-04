@@ -110,7 +110,7 @@ export default function PackagesPage() {
                   <div className="mt-5 grid gap-2">
                     {pack.items.map((item) => (
                       <p key={item} className="flex gap-2 text-xs font-bold leading-5 text-white/70">
-                        <Check className="mt-0.5 size-3.5 shrink-0 text-[#145cff]" />
+                        <Check className="mt-0.5 size-3.5 shrink-0 text-[#8b5cf6]" />
                         {item}
                       </p>
                     ))}
