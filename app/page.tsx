@@ -164,12 +164,13 @@ export default function Home() {
               <span className="h-0.5 w-12 bg-[#8b5cf6]" />
               Heron Marketing
             </div>
-            <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
-              <span className="block font-serif italic">Marketing that make</span>
-              <span className="block">your business impossible to ignore.</span>
+            <h1 className="max-w-none text-[2.35rem] font-light leading-[1.02] tracking-normal min-[380px]:text-[2.7rem] sm:text-[3.9rem] lg:text-[3.55rem] xl:whitespace-nowrap xl:text-[4.05rem]">
+              <span className="font-serif italic">Marketing that make</span>{" "}
+              your business impossible to ignore.
             </h1>
-            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/68 sm:text-lg">
+            <p className="mt-6 max-w-xl text-sm font-medium leading-7 text-white/62 sm:text-base">
               Helping businesses to turn their online presence into a
+              <br className="hidden sm:block" />
               competitive edge
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
