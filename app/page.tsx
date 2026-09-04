@@ -165,7 +165,7 @@ export default function Home() {
               Heron Marketing
             </div>
             <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
-              <span className="block font-serif italic">Marketing that make</span>
+              <span className="block whitespace-nowrap font-serif italic">Marketing that make</span>
               <span className="block">your business</span>
               <span className="block">impossible to ignore.</span>
             </h1>
