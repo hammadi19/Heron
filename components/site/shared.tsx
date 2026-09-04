@@ -16,11 +16,9 @@ import {
   MailIcon,
   MediaIcon,
   PhoneIcon,
-  PinterestIcon,
   SearchIcon,
   SendIcon,
   WebIcon,
-  XIcon,
 } from "@/components/site/service-icons";
 
 export const services = [
@@ -93,8 +91,6 @@ export const faqs = [
 const socialLinks = [
   { label: "Facebook", Icon: FacebookIcon },
   { label: "LinkedIn", Icon: LinkedInIcon },
-  { label: "X", Icon: XIcon },
-  { label: "Pinterest", Icon: PinterestIcon },
 ];
 
 export function Eyebrow({ children }: { children: ReactNode }) {
