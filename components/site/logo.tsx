@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function HeronLogo({
+  inverted = false,
   compact = false,
 }: {
   inverted?: boolean;
@@ -32,7 +33,7 @@ export function HeronLogo({
       aria-label="Heron Marketing home"
     >
       <Image
-        src="/heron-logo-lockup-transparent.png"
+        src={inverted ? "/heron-logo-lockup-white.png" : "/heron-logo-lockup-transparent.png"}
         alt="Heron Marketing"
         width={560}
         height={190}
