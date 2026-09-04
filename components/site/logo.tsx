@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function HeronLogo({
-  inverted = false,
   compact = false,
 }: {
   inverted?: boolean;
@@ -29,7 +28,7 @@ export function HeronLogo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center overflow-hidden ${inverted ? "drop-shadow-[0_10px_26px_rgba(255,255,255,.18)]" : ""}`}
+      className="inline-flex items-center overflow-hidden"
       aria-label="Heron Marketing home"
     >
       <Image
@@ -38,7 +37,7 @@ export function HeronLogo({
         width={560}
         height={190}
         priority
-        className={`site-logo-lockup h-10 w-auto object-contain transition-all duration-300 sm:h-14 ${inverted ? "brightness-0 invert" : ""}`}
+        className="site-logo-lockup h-10 w-auto object-contain transition-all duration-300 sm:h-14"
       />
     </Link>
   );
