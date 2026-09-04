@@ -6,16 +6,26 @@ import { Eyebrow, Footer, PageHero } from "@/components/site/shared";
 import {
   AnalyticsIcon,
   AwardIcon,
-  CreativeIcon,
   ProofIcon,
-  StrategyIcon,
 } from "@/components/site/service-icons";
 import { Button } from "@/components/ui/button";
 
-const principles = [
-  ["Strategic", "We start with the buyer, the offer, and the commercial signal that matters.", StrategyIcon],
-  ["Creative", "We turn clarity into campaign ideas, content, and conversion journeys that feel distinct.", CreativeIcon],
-  ["Measurable", "We connect decisions to tracking, dashboards, and repeatable learning loops.", AnalyticsIcon],
+const team = [
+  {
+    name: "Bhupesh Mistry",
+    role: "Founder & Client Director",
+    copy: "Bhupesh's background is mathematics. He has spent most of his career supporting commercial and sales functions, and co-founded Heron Marketing after seeing how big-corporate digital thinking could be localised for ambitious businesses.",
+  },
+  {
+    name: "Hammad Ur Rehman",
+    role: "Founder & Technical Director",
+    copy: "Hammad leads technical delivery across websites, systems, integrations, and performance-led digital infrastructure, bringing the build discipline needed to turn strategy into working products.",
+  },
+  {
+    name: "Harriet Dixon",
+    role: "Director of Operations",
+    copy: "Harriet keeps delivery organised, practical, and client-focused, making sure every project has clear communication, sensible priorities, and the right operational support behind it.",
+  },
 ];
 
 export default function AboutPage() {
@@ -23,24 +33,23 @@ export default function AboutPage() {
     <main className="bg-[#050505] text-white">
       <PageHero
         eyebrow="About Heron"
-        title="Strategy first. Systems always."
-        copy="Heron Marketing is built for companies that want sharper positioning, cleaner execution, and digital growth they can actually understand."
+        title="Digital expertise. Business results."
+        copy="We built Heron Marketing to give businesses the digital expertise they need to grow, without making things complicated."
       />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <div className="mx-auto grid max-w-[92rem] gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
           <div>
-            <Eyebrow>How we think</Eyebrow>
+            <Eyebrow>How We Support</Eyebrow>
             <h2 className="mt-5 text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl">
               We make marketing easier to choose, launch, measure, and improve.
             </h2>
             <p className="mt-5 text-base leading-7 text-white/64">
-              Most teams do not need more disconnected tactics. They need a
-              clear story, a practical campaign system, and a rhythm for making
-              better decisions every week.
+              We take the complexity out of digital marketing, giving you
+              straightforward advice and the right solutions for your business.
             </p>
             <div className="mt-6 grid gap-3 font-bold text-white/76">
-              {["Strategy before spend", "Creative tied to customer intent", "Weekly decisions from real signals", "Clear handoff between marketing and sales"].map((item) => (
+              {["The right plan before you spend", "Creative that connects with customers", "Decisions backed by real data", "Marketing that drives business growth"].map((item) => (
                 <p key={item} className="flex items-center gap-3">
                   <span className="grid size-6 shrink-0 place-items-center rounded-full bg-white/10 text-sm font-black text-[#7ce8d9]">
                     ✓
@@ -64,10 +73,14 @@ export default function AboutPage() {
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-12 sm:px-8 sm:py-14">
         <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
-          {principles.map(([title, copy, Icon]) => (
+          {[
+            ["250+", "websites delivered across the UK", ProofIcon],
+            ["90%", "of customers come back to work with us again", AwardIcon],
+            ["1000+", "ad campaigns managed", AnalyticsIcon],
+          ].map(([title, copy, Icon]) => (
             <article key={title as string} className="w-[78vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:border-white/10 md:bg-transparent md:p-0 md:pr-10 md:last:border-r-0">
               <Icon className="size-12" />
-              <h3 className="mt-5 text-xl font-black">{title as string}</h3>
+              <h3 className="mt-5 font-serif text-5xl font-light">{title as string}</h3>
               <p className="mt-3 leading-6 text-white/62">{copy as string}</p>
             </article>
           ))}
@@ -75,16 +88,16 @@ export default function AboutPage() {
       </section>
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-[92rem] rounded-2xl border border-white/10 bg-[#0d0f15] p-7 text-white shadow-[0_30px_100px_rgba(0,0,0,.34)] sm:p-10">
-          <ProofIcon className="size-12" />
-          <h2 className="mt-5 max-w-4xl text-3xl font-light leading-[1.05] tracking-normal sm:text-5xl">
-            Built for brands that want calm delivery and sharper growth decisions.
-          </h2>
-          <div className="mt-6 flex items-center gap-4">
-            <AwardIcon className="size-10" />
-            <p className="max-w-xl text-sm font-bold leading-7 text-white/66">
-              Senior strategy, polished creative, and clear reporting inside one growth rhythm.
-            </p>
+        <div className="mx-auto max-w-[92rem]">
+          <Eyebrow>Who We Are</Eyebrow>
+          <div className="mt-6 grid gap-5 lg:grid-cols-3">
+            {team.map((member) => (
+              <article key={member.name} className="rounded-2xl border border-white/10 bg-white/6 p-6">
+                <h2 className="text-2xl font-black">{member.name}</h2>
+                <p className="mt-1 text-sm font-black text-[#7ce8d9]">{member.role}</p>
+                <p className="mt-5 text-sm leading-7 text-white/64">{member.copy}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

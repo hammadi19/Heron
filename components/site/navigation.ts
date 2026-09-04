@@ -2,7 +2,8 @@ export const navLinks = [
   ["Home", "/"],
   ["About Us", "/about-us"],
   ["Services", "/services"],
+  ["Packages", "/packages"],
   ["Projects", "/projects"],
-  ["Blog", "/blog"],
+  ["Customised Solutions", "/customised-solutions"],
   ["Contact Us", "/contact-us"],
 ] as const;

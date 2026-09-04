@@ -19,56 +19,61 @@ import {
   PinterestIcon,
   SearchIcon,
   SendIcon,
-  StrategyIcon,
+  WebIcon,
   XIcon,
 } from "@/components/site/service-icons";
 
 export const services = [
   {
-    title: "Growth Strategy",
-    copy: "Positioning, audience mapping, acquisition priorities, and 90-day plans for confident growth decisions.",
-    icon: StrategyIcon,
+    title: "Web Design Services",
+    slug: "web-design-services",
+    copy: "Modern web design, redesigns, hosting, maintenance, and support for businesses that need a stronger first impression.",
+    icon: WebIcon,
     color: "#0f8bff",
   },
   {
-    title: "Performance Media",
-    copy: "Search, social, retargeting, and budget allocation systems that learn quickly before scaling.",
+    title: "Social Media Advertising",
+    slug: "social-media-advertising",
+    copy: "Targeted campaigns across Facebook, Instagram, LinkedIn, and TikTok to build awareness and generate enquiries.",
     icon: MediaIcon,
     color: "#ff5c7a",
   },
   {
-    title: "Conversion Design",
-    copy: "Landing pages, service pages, and campaign journeys designed around buyer intent and action.",
-    icon: CreativeIcon,
+    title: "SEO & AEO",
+    slug: "seo-aeo",
+    copy: "Search visibility for Google, AI Overviews, ChatGPT, Gemini, Copilot, and the way customers search now.",
+    icon: SearchIcon,
     color: "#00b8a9",
   },
   {
-    title: "Search & Content",
-    copy: "SEO architecture, content planning, local search, and intent-led pages that capture existing demand.",
-    icon: SearchIcon,
+    title: "PPC",
+    slug: "ppc",
+    copy: "Google Ads, Microsoft Ads, targeting, budgets, bid optimisation, and reporting built to reduce wasted spend.",
+    icon: AnalyticsIcon,
     color: "#7257ff",
   },
   {
-    title: "Analytics Systems",
-    copy: "Dashboards, tracking plans, attribution reviews, and weekly insight notes for useful reporting.",
-    icon: AnalyticsIcon,
+    title: "YouTube",
+    slug: "youtube",
+    copy: "YouTube advertising and content strategy that turns attention into traffic, leads, and stronger brand recall.",
+    icon: CreativeIcon,
     color: "#f5b700",
   },
   {
-    title: "Lifecycle Marketing",
-    copy: "Lead magnets, nurture sequences, CRM handoff, and follow-up systems that stop demand leaking.",
+    title: "Customised Digital Solutions",
+    slug: "customised-digital-solutions",
+    copy: "Bespoke booking systems, portals, e-commerce platforms, AI tools, integrations, and automated workflows.",
     icon: LifecycleIcon,
     color: "#284f9f",
   },
 ];
 
 export const portfolio = [
-  ["Launch Campaign", "Paid Social", "/heron-hero-office.png"],
-  ["Demand System", "Performance Marketing", "/heron-marketing-illustration.png"],
-  ["Landing Redesign", "Conversion Design", "/heron-growth-command.png"],
-  ["Search Growth", "SEO & Content", "/heron-hero-office.png"],
-  ["Lead Funnel", "Lifecycle Marketing", "/heron-growth-command.png"],
-  ["Brand Refresh", "Creative Direction", "/heron-marketing-illustration.png"],
+  ["Bentleys", "Website re-design and advertising push", "/heron-hero-office.png"],
+  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-marketing-illustration.png"],
+  ["Wreake Valley Craftsmen", "New website design", "/heron-growth-command.png"],
+  ["Local Services Brand", "SEO and AEO growth template", "/heron-hero-bright.png"],
+  ["Retail Growth Sprint", "PPC and social campaign framework", "/heron-about-home.png"],
 ];
 
 export const news = [
@@ -179,7 +184,7 @@ export function ServiceGrid() {
           />
           <h3 className="mt-6 text-xl font-black">{service.title}</h3>
           <p className="mt-3 min-h-20 text-sm leading-6 text-white/62">{service.copy}</p>
-          <Link href="/contact-us" className="mt-5 inline-flex items-center gap-2 text-sm font-black text-white transition group-hover:text-[#7ce8d9]">
+          <Link href={`/services/${service.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-black text-white transition group-hover:text-[#7ce8d9]">
             Explore service
             <ArrowRight className="size-4" />
           </Link>
@@ -237,9 +242,10 @@ export function Footer() {
   const usefulLinks = [
     ["About us", "/about-us"],
     ["Services", "/services"],
-    ["Testimonials", "/"],
+    ["Packages", "/packages"],
     ["Case Studies", "/projects"],
-    ["Help Desk", "/contact-us"],
+    ["Customised Solutions", "/customised-solutions"],
+    ["Contact Us", "/contact-us"],
   ];
 
   return (
@@ -298,14 +304,14 @@ export function Footer() {
         <div className="flex flex-col border-t border-white/10 py-10 lg:border-t-0 lg:px-14 lg:py-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             <h2 className="max-w-3xl text-3xl font-light leading-[1.04] tracking-normal sm:text-5xl">
-              Let&apos;s create the{" "}
-              <span className="font-serif italic">best digital growth systems.</span>
+              Let&apos;s take your{" "}
+              <span className="font-serif italic">digital presence to the next level.</span>
             </h2>
             <Link
               href="/contact-us"
               className="inline-flex h-14 w-fit items-center gap-2 rounded-xl bg-white px-7 text-base font-black text-[#080808] transition hover:bg-[#7ce8d9]"
             >
-              Let&apos;s Talk
+              Contact Us
               <ArrowRight className="size-5" />
             </Link>
           </div>

@@ -32,49 +32,60 @@ const clients = [
 
 const services = [
   {
-    title: "Strategy",
-    copy: "Insight-led positioning, offer clarity, and channel roadmaps built for scale.",
-    icon: StrategyIcon,
+    title: "Web Design",
+    copy: "Modern websites, redesigns, hosting, and support that build trust and convert visitors.",
+    icon: WebIcon,
+    href: "/services/web-design-services",
   },
   {
-    title: "Creative",
-    copy: "Scroll-stopping campaign concepts, copy, and design direction that earns attention.",
+    title: "Social Ads",
+    copy: "Targeted paid social campaigns built around reach, enquiries, and measurable growth.",
     icon: CreativeIcon,
+    href: "/services/social-media-advertising",
   },
   {
-    title: "Media",
-    copy: "Data-driven paid media planning and buying that maximizes reach and ROI.",
+    title: "SEO & AEO",
+    copy: "Search and AI visibility so your business shows up where customers now ask questions.",
     icon: MediaIcon,
+    href: "/services/seo-aeo",
   },
   {
-    title: "Search",
-    copy: "SEO and intent capture systems that bring high-value demand to the surface.",
+    title: "PPC",
+    copy: "Fast, targeted advertising across search and social with tight budget control.",
     icon: SearchIcon,
+    href: "/services/ppc",
   },
   {
-    title: "Analytics",
-    copy: "Clear reporting and insight loops that turn campaign data into smarter decisions.",
+    title: "YouTube",
+    copy: "Advertising and video strategy that captures attention and supports long-term brand growth.",
     icon: AnalyticsIcon,
+    href: "/services/youtube",
+  },
+  {
+    title: "Custom Solutions",
+    copy: "Bespoke portals, booking tools, AI workflows, integrations, and e-commerce systems.",
+    icon: LifecycleIcon,
+    href: "/customised-solutions",
   },
 ];
 
 const aboutHighlights = [
-  ["Digital Strategy", "Positioning, offer clarity, campaign planning, and growth roadmaps.", StrategyIcon],
-  ["Conversion Systems", "Landing pages, funnels, lifecycle flows, and high-intent user journeys.", WebIcon],
-  ["Marketing Growth", "SEO, paid media, brand campaigns, analytics, and scalable demand systems.", LifecycleIcon],
+  ["30+ Years of Digital Expertise", "Combined experience across web design, development, SEO, digital marketing, and online growth.", StrategyIcon],
+  ["Delivering The Full Digital Wheelhouse", "Web, development, SEO, advertising, social, AI, and bespoke solutions delivered in-house.", WebIcon],
+  ["Expertise Without the Agency Price Tag", "A lean, experienced, hands-on team means less overhead and better value for you.", LifecycleIcon],
 ];
 
 const process = [
-  ["01", "Discover", "We diagnose the audience, market, funnel, and growth bottleneck before prescribing work."],
-  ["02", "Design", "We craft the strategy, message system, channel plan, and conversion journey."],
-  ["03", "Launch", "We ship campaigns, creative, landing pages, and tracking with precision."],
-  ["04", "Scale", "We optimize, test, and reinvest in the signals that prove commercial value."],
+  ["01", "Discover", "We learn what matters: your business, audience, offer, and opportunity."],
+  ["02", "Design", "We shape the positioning, site structure, channel plan, and conversion journey."],
+  ["03", "Launch", "Once built and refined, we launch the site or campaign ready to do its job from day one."],
+  ["04", "Scale", "We test, optimise, and double down on what delivers real business results."],
 ];
 
 const work = [
-  ["SaaS Growth Campaign", "4.2x pipeline in 90 days", "/heron-hero-office.png"],
-  ["DTC Performance Launch", "3.8x ROAS in 60 days", "/heron-marketing-illustration.png"],
-  ["Brand Awareness Scale", "+168% lift in brand search", "/heron-growth-command.png"],
+  ["Bentleys", "Website re-design and advertising push", "/heron-hero-office.png"],
+  ["Potters Carpets and Beds", "Ecommerce web build", "/heron-marketing-illustration.png"],
+  ["Wreake Valley Craftsmen", "New website design", "/heron-growth-command.png"],
 ];
 
 const faqs = [
@@ -82,6 +93,19 @@ const faqs = [
   "How do you measure success?",
   "What is your typical engagement process?",
   "Do you offer ongoing support and optimization?",
+];
+
+const founders = [
+  ["Bhupesh Mistry", "Founder & Client Director", "No two businesses are the same. We tailor our solutions to what your business actually needs."],
+  ["Hammad Ur Rehman", "Founder & Technical Director", "Marketing is not just how it looks, but how it works. We build systems that perform and connect."],
+  ["Harriet Mistry", "Director of Operations", "We believe in earning your business, not tying you into it. Honest advice, no unnecessary upselling — just solutions that genuinely add value."],
+];
+
+const chooseHeron = [
+  ["Built on real digital expertise", "Our team comes from ecommerce and tech, bringing 30+ years of combined experience building brands and growing businesses online."],
+  ["Flexible support for every stage of growth", "From startups needing a strong online presence to established businesses seeking high-performance digital experiences, we tailor our approach."],
+  ["Agile, scalable, and built around you", "Whether you need a one-off project, ongoing marketing, or full strategic guidance, our service packages flex with your business."],
+  ["Local presence, global capability", "UK-based responsiveness with the experience, resources, and expertise to support businesses internationally."],
 ];
 
 function DummyLogoMark({ type }: { type: string }) {
@@ -137,9 +161,14 @@ export default function Home() {
         <div className="relative z-10 mx-auto grid w-full max-w-[92rem] flex-1 gap-8 px-4 pb-12 pt-28 sm:px-8 sm:pt-32 lg:grid-cols-[1.18fr_0.82fr] lg:items-center lg:gap-10 lg:pb-20 lg:pt-36">
           <div className="min-w-0">
             <h1 className="max-w-[54rem] text-[2.72rem] font-light leading-[0.98] tracking-normal min-[380px]:text-[3.05rem] sm:text-[4.6rem] lg:text-[5.45rem]">
-              <span className="block font-serif italic">Marketing that performs.</span>
-              <span className="block">experiences that convert</span>
+              <span className="block font-serif italic">Digital expertise.</span>
+              <span className="block">business results</span>
             </h1>
+            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/68 sm:text-lg">
+              Heron Marketing creates digital branding, websites, campaigns,
+              and bespoke growth systems that help businesses strengthen their
+              online presence and turn it into real commercial momentum.
+            </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:gap-4">
               <Button asChild className="h-12 w-full rounded-xl bg-white px-6 text-sm font-black text-[#080808] hover:bg-[#7ce8d9] sm:h-14 sm:w-auto sm:px-8 sm:text-base">
                 <Link href="/contact-us">
@@ -157,14 +186,24 @@ export default function Home() {
           </div>
 
           <div className="min-w-0">
-            <div className="relative">
-              <div className="relative h-[17.5rem] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[19rem] sm:h-[25rem] sm:rounded-[2rem]">
+            <div className="relative min-h-[22rem] sm:min-h-[30rem]">
+              <div className="absolute right-0 top-0 h-[16.5rem] w-[82%] overflow-hidden rounded-[1.35rem] bg-[#111318] shadow-[0_30px_100px_rgba(0,0,0,.48)] ring-1 ring-white/10 min-[380px]:h-[18rem] sm:h-[24rem] sm:rounded-[2rem]">
                 <Image
                   src="/heron-hero-bright.png"
                   alt="Heron Marketing strategists reviewing a growth plan"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 38vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 h-[13rem] w-[58%] overflow-hidden rounded-[1.25rem] bg-[#111318] shadow-[0_24px_80px_rgba(0,0,0,.45)] ring-1 ring-white/10 sm:h-[18rem] sm:rounded-[1.6rem]">
+                <Image
+                  src="/heron-growth-command.png"
+                  alt="Heron Marketing team planning digital growth"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 60vw, 25vw"
                   className="object-cover"
                 />
               </div>
@@ -198,7 +237,7 @@ export default function Home() {
         <div className="absolute right-0 top-8 h-56 w-56 bg-[radial-gradient(circle,rgba(170,124,255,.14),transparent_68%)] sm:h-96 sm:w-96 sm:bg-[radial-gradient(circle,rgba(170,124,255,.18),transparent_68%)]" />
         <div className="relative mx-auto max-w-[92rem]">
           <Eyebrow>What We Do</Eyebrow>
-          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="mobile-carousel no-scrollbar -mx-4 mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto px-4 pb-3 lg:mx-0 lg:grid lg:grid-cols-6 lg:gap-0 lg:overflow-visible lg:px-0 lg:pb-0">
             {services.map((service, index) => (
               <article key={service.title} className="w-[78vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-5 shadow-[0_18px_50px_rgba(0,0,0,.18)] lg:w-auto lg:flex-auto lg:rounded-none lg:border-0 lg:border-r lg:border-white/10 lg:bg-transparent lg:p-0 lg:px-8 lg:shadow-none lg:first:pl-0 lg:last:border-r-0">
                 <service.icon
@@ -207,9 +246,9 @@ export default function Home() {
                 />
                 <h2 className="mt-5 text-xl font-black">{service.title}</h2>
                 <p className="mt-4 max-w-xs text-sm leading-6 text-white/62">{service.copy}</p>
-                <Link href="/services" className="mt-5 inline-flex text-white transition hover:text-[#7ce8d9]" aria-label={`Explore ${service.title}`}>
-                  <ArrowRight className="size-5" />
-                </Link>
+                  <Link href={service.href} className="mt-5 inline-flex text-white transition hover:text-[#7ce8d9]" aria-label={`Explore ${service.title}`}>
+                    <ArrowRight className="size-5" />
+                  </Link>
               </article>
             ))}
           </div>
@@ -221,14 +260,14 @@ export default function Home() {
           <div className="min-w-0">
             <Eyebrow>About Us</Eyebrow>
             <h2 className="mt-5 max-w-4xl text-4xl font-light leading-[1.03] tracking-normal sm:text-5xl">
-              <span className="font-serif italic">Crafting campaigns that deliver</span>
+              <span className="font-serif italic">Creating digital solutions that deliver</span>
               <br />
               results and delight customers
             </h2>
             <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-white/70">
-              We are a creative growth studio specializing in sharp strategy,
-              high-converting digital experiences, and marketing systems that
-              help ambitious brands scale with confidence.
+              Heron Marketing are your experts when it comes to digital
+              branding. We work with all types of businesses to strengthen
+              their online presence and turn it into a driver of real growth.
             </p>
 
             <div className="mobile-carousel no-scrollbar mt-6 flex snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 sm:grid sm:gap-6 sm:overflow-visible sm:pb-0">
@@ -237,10 +276,10 @@ export default function Home() {
                   <Icon className="size-14" />
                   <div>
                     <h3 className="text-xl font-black">{title as string}</h3>
-                    <p className="mt-2 text-base leading-7 text-white/64">{copy as string}</p>
-                  </div>
-                </div>
-              ))}
+                <p className="mt-2 text-sm leading-7 text-white/64 sm:text-base">{copy as string}</p>
+              </div>
+            </div>
+          ))}
             </div>
           </div>
 
@@ -257,11 +296,15 @@ export default function Home() {
             <div className="mt-6 grid gap-5 sm:grid-cols-[7rem_1fr] sm:items-center sm:gap-6">
               <AwardIcon className="size-20" />
               <div>
-                <blockquote className="font-serif text-2xl italic leading-tight text-white/70 sm:text-3xl">
-                  “Marketing is not just how it looks, but how it works. We
-                  build systems that perform and connect.”
-                </blockquote>
-                <p className="mt-6 text-xl font-black">- Heron Marketing</p>
+                <div className="grid gap-4">
+                  {founders.map(([name, role, quote]) => (
+                    <blockquote key={name} className="border-l border-[#7ce8d9]/60 pl-4">
+                      <p className="font-serif text-xl italic leading-tight text-white/72">“{quote}”</p>
+                      <p className="mt-3 text-base font-black">{name}</p>
+                      <p className="text-sm text-white/50">{role}</p>
+                    </blockquote>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -299,13 +342,40 @@ export default function Home() {
 
       <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
         <div className="mx-auto max-w-[92rem]">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div>
+              <Eyebrow>Why Choose Heron</Eyebrow>
+              <h2 className="mt-5 max-w-2xl text-4xl font-light leading-[1.05] tracking-normal sm:text-5xl">
+                Agile digital support for every stage of growth.
+              </h2>
+              <p className="mt-5 text-base leading-8 text-white/64">
+                Agility is at the heart of how we work. Whether you need a
+                simple starting point, ongoing marketing support, or a fully
+                developed digital strategy, we adapt to the level of involvement
+                that works for you.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {chooseHeron.map(([title, copy]) => (
+                <article key={title} className="rounded-2xl border border-white/10 bg-white/6 p-5">
+                  <h3 className="text-lg font-black">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/62">{copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-14 sm:px-8 sm:pb-16 lg:pb-20">
+        <div className="mx-auto max-w-[92rem]">
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow>Selected Work</Eyebrow>
+              <Eyebrow>Our Work</Eyebrow>
               <h2 className="mt-4 max-w-2xl text-4xl font-light leading-[1.04] tracking-normal sm:text-5xl">
-                <span className="font-serif">Campaign systems</span>
+                <span className="font-serif">Digital projects</span>
                 <br />
-                with measurable outcomes
+                built around real businesses
               </h2>
             </div>
             <Button asChild variant="outline" className="h-12 w-full rounded-xl border-white/22 bg-white/6 px-7 font-black text-white hover:bg-white/12 sm:h-14 sm:w-auto">
@@ -343,11 +413,12 @@ export default function Home() {
       </section>
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-12 sm:px-8 sm:py-14">
-        <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:pb-0">
+        <div className="mobile-carousel no-scrollbar mx-auto flex max-w-[92rem] snap-x snap-mandatory flex-nowrap gap-4 overflow-x-auto pb-3 md:grid md:grid-cols-4 md:gap-8 md:overflow-visible md:pb-0">
           {[
-            ["38%", "Average increase in qualified leads within 90 days"],
-            ["4.8x", "Average return on ad spend across campaigns"],
-            ["90 days", "Typical time to meaningful performance lift"],
+            ["250+", "Websites delivered across the UK"],
+            ["28%", "Average increase in sales within 100 days"],
+            ["18 days", "Average website turnaround"],
+            ["3.5x", "Average return on ad spend across campaigns"],
           ].map(([value, label]) => (
             <div key={value} className="w-[74vw] flex-none snap-start rounded-2xl border border-white/10 bg-white/6 p-6 text-center md:w-auto md:flex-auto md:rounded-none md:border-0 md:border-r md:border-white/10 md:bg-transparent md:p-0 md:last:border-r-0">
               <p className="font-serif text-5xl font-light">{value}</p>
@@ -409,12 +480,12 @@ export default function Home() {
           <div className="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_72%_50%,rgba(124,232,217,.62),transparent_34%),radial-gradient(circle_at_90%_30%,rgba(20,92,255,.5),transparent_26%)]" />
           <div className="relative z-10">
             <h2 className="max-w-xl text-4xl font-light leading-[1.05] tracking-normal">
-              Ready to build your next growth system?
+              Want Heron to help you build your digital brand?
             </h2>
             <div className="mt-5 flex flex-col gap-5 border-t border-white/18 pt-8 sm:flex-row sm:items-center">
               <Button asChild className="h-12 w-full rounded-xl bg-white px-7 font-black text-[#080808] hover:bg-[#b9f6e8] sm:h-14 sm:w-auto">
                 <Link href="/contact-us">
-                  Start a Project
+                  Contact Us
                   <ArrowRight className="size-4" />
                 </Link>
               </Button>

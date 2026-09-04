@@ -23,17 +23,43 @@ const outcomes = [
   },
 ];
 
+const caseStudies = [
+  ["Bentleys", "Website re-design and advertising push", "A refreshed website experience paired with a sharper advertising push to improve credibility, enquiries, and conversion confidence."],
+  ["Potters Carpets and Beds", "Ecommerce web build", "A commerce-ready website structure designed around product discovery, trust, and a cleaner path from browsing to purchase."],
+  ["Wreake Valley Craftsmen", "New website design", "A new digital presence shaped around craftsmanship, local visibility, and clear service enquiries."],
+  ["Regional Services Brand", "SEO and AEO visibility sprint", "A template case study for search foundations, AI visibility, local intent pages, and measurable ranking momentum."],
+  ["Retail Growth Campaign", "Paid media and conversion framework", "A template case study for campaign strategy, landing page improvements, creative testing, and return-on-spend reporting."],
+];
+
 export default function ProjectsPage() {
   return (
     <main className="bg-[#050505] text-white">
       <PageHero
-        eyebrow="Selected Work"
-        title="Campaign systems with measurable outcomes."
-        copy="Representative project stories across launch campaigns, search growth, paid media, landing pages, and lifecycle systems."
+        eyebrow="Our Work"
+        title="Case studies built to show the full story."
+        copy="Five project templates across web redesign, ecommerce, new website design, SEO, paid media, and conversion strategy."
       />
 
       <section className="px-4 py-14 sm:px-8 sm:py-16 lg:py-20">
         <PortfolioGrid />
+        <div className="mx-auto mt-10 grid max-w-[92rem] gap-5">
+          {caseStudies.map(([client, service, copy], index) => (
+            <article key={client} className="grid gap-5 rounded-2xl border border-white/10 bg-white/6 p-6 md:grid-cols-[8rem_1fr_auto] md:items-center">
+              <p className="font-serif text-5xl font-light text-white/32">{String(index + 1).padStart(2, "0")}</p>
+              <div>
+                <h2 className="text-2xl font-black">{client}</h2>
+                <p className="mt-1 text-sm font-black text-[#7ce8d9]">{service}</p>
+                <p className="mt-3 max-w-3xl text-sm leading-7 text-white/62">{copy}</p>
+              </div>
+              <Button asChild variant="outline" className="h-11 rounded-xl border-white/14 bg-white/8 font-black text-white hover:bg-white/14">
+                <Link href="/contact-us">
+                  Discuss similar
+                  <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="border-y border-white/10 bg-[#080808] px-4 py-12 sm:px-8 sm:py-14">
